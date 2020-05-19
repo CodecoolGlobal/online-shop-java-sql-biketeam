@@ -19,11 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected">
+    <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="DAO skeleton">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/codecool/models/Basket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baza.sqbpro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/baza" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/Basket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/baza" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/baza" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,20 +61,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Pobrane/sqlite-jdbc-3.30.1.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.codecool" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/com/codecool" />
       <recent name="$PROJECT_DIR$/src/src/com/codecool/src" />
     </key>
@@ -112,14 +113,7 @@
       <option name="project" value="LOCAL" />
       <updated>1589877399198</updated>
     </task>
-    <task id="LOCAL-00002" summary="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected">
-      <created>1589885417962</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1589885417963</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,83 +133,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DAO skeleton" />
-    <MESSAGE value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO skeleton" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2363" y="116" width="1024" height="845" key="#Project_Structure" timestamp="1589885589058">
+    <state x="2363" y="116" width="1024" height="845" key="#Project_Structure" timestamp="1589878101113">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2363" y="116" width="1024" height="845" key="#Project_Structure/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885589058" />
-    <state x="2663" y="203" width="424" height="671" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1589886561522">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2663" y="203" width="424" height="671" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589886561522" />
+    <state x="2363" y="116" width="1024" height="845" key="#Project_Structure/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589878101113" />
     <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589878150918">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589878150918" />
-    <state x="2583" y="335" width="622" height="407" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589884734298">
+    <state x="2583" y="335" width="600" height="407" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589877357963">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2583" y="335" width="622" height="407" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589884734298" />
+    <state x="2583" y="335" width="600" height="407" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589877357963" />
     <state x="707" y="354" width="562" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1589836094992" />
-    <state x="2695" y="280" width="524" height="444" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1589886300638">
+    <state x="2369" y="174" key="SettingsEditor" timestamp="1589878136854">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2695" y="280" width="524" height="444" key="#com.intellij.ide.util.PackageChooserDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589886300638" />
-    <state x="2633" y="447" width="484" height="184" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1589886302844">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2633" y="447" width="484" height="184" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589886302844" />
-    <state x="2616" y="392" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589885276964">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2616" y="392" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885276964" />
-    <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl" timestamp="1589882470508">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589882470508" />
-    <state width="1874" height="231" key="GridCell.Tab.0.bottom" timestamp="1589887312970">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887312970" />
-    <state width="1874" height="231" key="GridCell.Tab.0.center" timestamp="1589887312970">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887312970" />
-    <state width="1874" height="231" key="GridCell.Tab.0.left" timestamp="1589887312970">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887312970" />
-    <state width="1874" height="231" key="GridCell.Tab.0.right" timestamp="1589887312970">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887312970" />
-    <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1589885245337">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
-    <state width="1874" height="354" key="GridCell.Tab.1.center" timestamp="1589885245337">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
-    <state width="1874" height="354" key="GridCell.Tab.1.left" timestamp="1589885245337">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
-    <state width="1874" height="354" key="GridCell.Tab.1.right" timestamp="1589885245337">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
-    <state x="2346" y="98" key="SettingsEditor" timestamp="1589887762368">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2346" y="98" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887762368" />
-    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589885420685">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="2369" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589878136854" />
+    <state x="395" y="186" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589881870347">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="395" y="186" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1589881870347" />
-    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885420685" />
+    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589877401866" />
   </component>
 </project>
