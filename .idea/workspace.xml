@@ -20,13 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="DAO skeleton">
-      <change beforePath="$PROJECT_DIR$/com/codecool/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/com/codecool/src/bike_shop" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/bike_shop" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/codecool/models/Basket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/Basket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/baza" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/baza" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,6 +50,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1c65ACnTktSzzDy7yyqoEYroBLF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,7 +80,7 @@
       <module name="online-shop-java-sql-biketeam" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codecool.*" />
+          <option name="PATTERN" value="com.codecool.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,6 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589836056137</updated>
+      <workItem from="1589877972665" duration="3643000" />
     </task>
     <task id="LOCAL-00001" summary="DAO skeleton">
       <created>1589877399198</created>
@@ -100,6 +115,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -135,20 +153,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2369" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589878136854" />
-    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589877401866">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="395" y="186" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589881870347">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="395" y="186" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1589881870347" />
     <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589877401866" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/com/codecool/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
