@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected">
+    <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected and works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baza.sqbpro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/baza" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -119,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589885417963</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected and works">
+      <created>1589887885530</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589887885530</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +144,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DAO skeleton" />
     <MESSAGE value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected" />
+    <MESSAGE value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected and works" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected and works" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2363" y="116" width="1024" height="845" key="#Project_Structure" timestamp="1589885589058">
@@ -172,26 +177,26 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2616" y="392" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885276964" />
-    <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl" timestamp="1589882470508">
+    <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl" timestamp="1589888200980">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589882470508" />
-    <state width="1874" height="231" key="GridCell.Tab.0.bottom" timestamp="1589887312970">
+    <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888200980" />
+    <state width="1874" height="231" key="GridCell.Tab.0.bottom" timestamp="1589888078466">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887312970" />
-    <state width="1874" height="231" key="GridCell.Tab.0.center" timestamp="1589887312970">
+    <state width="1874" height="231" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888078466" />
+    <state width="1874" height="231" key="GridCell.Tab.0.center" timestamp="1589888078466">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887312970" />
-    <state width="1874" height="231" key="GridCell.Tab.0.left" timestamp="1589887312970">
+    <state width="1874" height="231" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888078466" />
+    <state width="1874" height="231" key="GridCell.Tab.0.left" timestamp="1589888078466">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887312970" />
-    <state width="1874" height="231" key="GridCell.Tab.0.right" timestamp="1589887312970">
+    <state width="1874" height="231" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888078466" />
+    <state width="1874" height="231" key="GridCell.Tab.0.right" timestamp="1589888078466">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887312970" />
+    <state width="1874" height="231" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888078466" />
     <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1589885245337">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -208,14 +213,14 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
-    <state x="2346" y="98" key="SettingsEditor" timestamp="1589887762368">
+    <state x="2737" y="103" width="954" height="730" key="SettingsEditor" timestamp="1589888069658">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2346" y="98" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887762368" />
-    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589885420685">
+    <state x="2737" y="103" width="954" height="730" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888069658" />
+    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589887887688">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="395" y="186" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1589881870347" />
-    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885420685" />
+    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887887688" />
   </component>
 </project>
