@@ -7,13 +7,15 @@ public class Bike {
     private String type;
     private String color;
     private int inStock;
+    private int price;
 
-    public Bike(int id, String brand, String type, String color, int inStock) {
+    public Bike(int id, String brand, String type, String color, int inStock, int price) {
         this.id = id;
         this.brand = brand;
         this.type = type;
         this.color = color;
         this.inStock = inStock;
+        this.price = price;
     }
 
     public int getId() {
@@ -48,11 +50,15 @@ public class Bike {
         this.color = color;
     }
 
-    public int isInStock() {
+    public int getInStock() {
         return this.inStock;
     }
 
     public void setInStock(int inStock) {
         this.inStock = inStock;
     }
+    
+    public int getPrice() { return this.price;}
+    
+    public void setPrice(int price) { price = this.price;}
 }

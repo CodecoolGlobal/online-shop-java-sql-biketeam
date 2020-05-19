@@ -19,11 +19,13 @@ public class Main {
             }
 
             BikeDao bikeDao = new BikeDao();
+            bikeDao.addBike( "Merida", "City", "Red", 10, 2000);
+         //   bikeDao.removeBike("Merida", 12);
             List<Bike> bikes = bikeDao.getBikes();
             System.out.println("~~Our Bikes to sell: ~~");
             for (Bike bike : bikes) {
 
-                System.out.println(bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor());
+                System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice());
             }
 
 
