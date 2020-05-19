@@ -7,5 +7,11 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/src/baza</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="bike_shop" uuid="dee5da50-5d72-4df4-a205-db0d2cc67d5f">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/main/java/com/codecool/resources/bike_shop</jdbc-url>
+    </data-source>
   </component>
 </project>

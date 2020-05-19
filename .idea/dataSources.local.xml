@@ -3,6 +3,10 @@
   <component name="dataSourceStorageLocal">
     <data-source name="baza" uuid="06d2b870-7cda-4b70-bbe2-47f98ab5ef16">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="bike_shop" uuid="dee5da50-5d72-4df4-a205-db0d2cc67d5f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <auth-provider>no-auth</auth-provider>
       <schema-mapping />
     </data-source>
