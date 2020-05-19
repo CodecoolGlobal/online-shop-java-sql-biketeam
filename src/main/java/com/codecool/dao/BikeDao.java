@@ -56,7 +56,7 @@ public class BikeDao extends Dao {
             ResultSet results = statement.executeQuery(String.format("SELECT * FROM Bike WHERE Brand IN ('%s')", brand));
             int updatedSupplies = results.getInt("In_Stock") - howMany;
             statement.executeUpdate(String.format("UPDATE Bike SET In_Stock = %d WHERE Brand = '%s'", updatedSupplies, brand));
-            if (updatedSupplies == 0) {
+            if (updatedSupplies <= 0) {
                 statement.executeUpdate(String.format("DELETE FROM Bike WHERE Brand='%s'", brand));
             }
             statement.close();

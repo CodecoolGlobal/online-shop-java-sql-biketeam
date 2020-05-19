@@ -19,7 +19,7 @@ public class Main {
             }
 
             BikeDao bikeDao = new BikeDao();
-            bikeDao.addBike( "Merida", "City", "Red", 10, 2000);
+         //   bikeDao.addBike( "Merida", "City", "Red", 10, 2000);
          //   bikeDao.removeBike("Merida", 12);
             List<Bike> bikes = bikeDao.getBikes();
             System.out.println("~~Our Bikes to sell: ~~");
