@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected and works" />
+    <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="CustomerDao is not red now">
+      <change beforePath="$PROJECT_DIR$/com/codecool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/resources/bike_shop" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/resources/bike_shop" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589887885530</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="CustomerDao is not red now">
+      <created>1589888713276</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589888713276</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +154,8 @@
     <MESSAGE value="DAO skeleton" />
     <MESSAGE value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected" />
     <MESSAGE value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected and works" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserDao.java is now CustomerDao, also SQL (.jar) file is somehow connected and works" />
+    <MESSAGE value="CustomerDao is not red now" />
+    <option name="LAST_COMMIT_MESSAGE" value="CustomerDao is not red now" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2363" y="116" width="1024" height="845" key="#Project_Structure" timestamp="1589885589058">
@@ -179,22 +191,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888200980" />
-    <state width="1874" height="231" key="GridCell.Tab.0.bottom" timestamp="1589888078466">
+    <state width="1874" height="231" key="GridCell.Tab.0.bottom" timestamp="1589889012215">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888078466" />
-    <state width="1874" height="231" key="GridCell.Tab.0.center" timestamp="1589888078466">
+    <state width="1874" height="231" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
+    <state width="1874" height="231" key="GridCell.Tab.0.center" timestamp="1589889012215">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888078466" />
-    <state width="1874" height="231" key="GridCell.Tab.0.left" timestamp="1589888078466">
+    <state width="1874" height="231" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
+    <state width="1874" height="231" key="GridCell.Tab.0.left" timestamp="1589889012215">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888078466" />
-    <state width="1874" height="231" key="GridCell.Tab.0.right" timestamp="1589888078466">
+    <state width="1874" height="231" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
+    <state width="1874" height="231" key="GridCell.Tab.0.right" timestamp="1589889012215">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="231" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888078466" />
+    <state width="1874" height="231" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1589885245337">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -211,14 +223,26 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
+    <state x="2023" y="103" width="1798" height="872" key="MergeDialog" timestamp="1589888803466">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2023" y="103" width="1798" height="872" key="MergeDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888803466" />
+    <state x="2761" y="407" width="476" height="264" key="MultipleFileMergeDialog" timestamp="1589888803471">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2761" y="407" width="476" height="264" key="MultipleFileMergeDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888803471" />
     <state x="2737" y="103" width="954" height="730" key="SettingsEditor" timestamp="1589888069658">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2737" y="103" width="954" height="730" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888069658" />
-    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589887887688">
+    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589888716917">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="395" y="186" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1589881870347" />
-    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589887887688" />
+    <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888716917" />
+    <state x="2544" y="246" key="run.anything.popup" timestamp="1589888987436">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2544" y="246" key="run.anything.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888987436" />
   </component>
 </project>
