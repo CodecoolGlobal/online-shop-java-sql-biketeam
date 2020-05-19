@@ -1,7 +1,5 @@
 package com.codecool;
 
-//import com.jakewharton.fliptables.FlipTableConverters;
-
 import com.codecool.dao.BasketDao;
 import com.codecool.dao.CustomerDao;
 import com.codecool.models.Basket;
@@ -22,11 +20,10 @@ public class Main {
             List<Basket> baskets = basketDao.getBasket();
 
             for (Basket basket : baskets) {
-                System.out.println(basket.getBasketId() + " " + basket.getBikeId() + " " + basket.getCustomerId());
+                System.out.println(basket.getBasketId() + " " +
+                        basket.getBikeId() + " " + basket.getCustomerId() + " " +
+                        basket.getBikeName() );
             }
-
-       //      pretty table
-    //        System.out.println(FlipTableConverters.fromIterable(users, User.class));
 
         }
     }
