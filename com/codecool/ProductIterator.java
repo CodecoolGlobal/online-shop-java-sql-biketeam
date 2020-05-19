@@ -1,5 +1,5 @@
 package com.codecool;
-
+import com.codecool.models.Product;
 import java.util.Iterator;
 
 public class ProductIterator implements Iterator<Product> {

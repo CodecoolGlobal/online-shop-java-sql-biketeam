@@ -20,16 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="DAO skeleton">
-      <change afterPath="$PROJECT_DIR$/com/codecool/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/codecool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/Basket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/FeaturedCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/FeaturedCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/ProductIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/ProductIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/codecool/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/codecool/src/bike_shop" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/bike_shop" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
