@@ -1,14 +1,14 @@
 package com.codecool.models;
 
-public class Product {
+public class Bike {
 
     private int id;
     private String brand;
     private String type;
     private String color;
-    private boolean inStock;
+    private int inStock;
 
-    public Product(int id, String brand, String type, String color, boolean inStock) {
+    public Bike(int id, String brand, String type, String color, int inStock) {
         this.id = id;
         this.brand = brand;
         this.type = type;
@@ -48,11 +48,11 @@ public class Product {
         this.color = color;
     }
 
-    public boolean isInStock() {
+    public int isInStock() {
         return this.inStock;
     }
 
-    public void setInStock(boolean inStock) {
+    public void setInStock(int inStock) {
         this.inStock = inStock;
     }
 }

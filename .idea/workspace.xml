@@ -20,49 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="CustomerDao is not red now">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/online-shop-java-sql-biketeam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/online-shop-java-sql-biketeam.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/FeaturedCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/FeaturedCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/ProductIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/ProductIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dao/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/models/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/models/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/models/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/models/Basket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/models/CustomersData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/models/CustomersData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/resources/bike_shop" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bike_shop" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/codecool/resources/bike_shop.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bike_shop.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/libraries/sqlite_jdbc_3_30_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/online-shop-java-sql-biketeam.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/FeaturedCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/ProductIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/dao/CustomerDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/dao/Dao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/models/Basket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/models/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/models/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/models/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/resources/bike_shop" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/com/codecool/resources/bike_shop.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/online-shop-java-sql-biketeam/online-shop-java-sql-biketeam.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/ProductIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/ProductIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/models/Bike.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,12 +55,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../sqlite-jdbc-3.30.1.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/sqlite-jdbc-3.30.1.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -282,11 +243,12 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2761" y="407" width="476" height="264" key="MultipleFileMergeDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888803471" />
-    <state x="817" y="99" width="954" height="728" key="SettingsEditor" timestamp="1589890880070">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="855" y="127" width="954" height="728" key="SettingsEditor" timestamp="1589895964539">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="817" y="99" width="954" height="728" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589890880070" />
     <state x="2737" y="103" width="954" height="730" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888069658" />
+    <state x="855" y="127" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1589895964539" />
     <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589888716917">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

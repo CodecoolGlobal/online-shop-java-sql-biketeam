@@ -1,15 +1,15 @@
 package com.codecool;
-import com.codecool.models.Product;
+import com.codecool.models.Bike;
 import java.util.Iterator;
 
-public class ProductIterator implements Iterator<Product> {
+public class ProductIterator implements Iterator<Bike> {
     @Override
     public boolean hasNext() {
         return false;
     }
 
     @Override
-    public Product next() {
+    public Bike next() {
         return null;
     }
 }
