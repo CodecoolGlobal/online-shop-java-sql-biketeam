@@ -1,3 +1,5 @@
+package com.codecool;
+
 import java.util.Iterator;
 
 public class ProductIterator implements Iterator<Product> {

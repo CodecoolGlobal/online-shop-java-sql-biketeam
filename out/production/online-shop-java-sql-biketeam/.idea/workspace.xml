@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="DAO skeleton">
-      <change afterPath="$PROJECT_DIR$/com/codecool/Dao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/com/codecool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/Basket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/FeaturedCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/codecool/FeaturedCategory.java" afterDir="false" />
@@ -128,33 +125,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2363" y="116" width="1024" height="845" key="#Project_Structure/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589878101113" />
-    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589878150918">
+    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589877466432">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589878150918" />
+    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589877466432" />
     <state x="2583" y="335" width="600" height="407" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589877357963">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2583" y="335" width="600" height="407" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589877357963" />
     <state x="707" y="354" width="562" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1589836094992" />
-    <state x="2369" y="174" key="SettingsEditor" timestamp="1589878136854">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2369" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589878136854" />
     <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1589877401866">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2475" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589877401866" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/com/codecool/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
