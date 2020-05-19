@@ -9,7 +9,7 @@ public abstract class Dao {
     protected Connection connection;
     protected Statement statement;
 
-    public static final String DB_NAME = "resources/bike_shop.db";
+    public static final String DB_NAME = "com/codecool/resources/bike_shop";
     public static final String CONNECTION_STRING = "jdbc:sqlite:" + DB_NAME;
 
     public void connect() {
