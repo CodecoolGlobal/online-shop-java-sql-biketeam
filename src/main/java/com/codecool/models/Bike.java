@@ -7,13 +7,17 @@ public class Bike {
     private String type;
     private String color;
     private int inStock;
+    private int price;
+    private boolean isAvailable;
 
-    public Bike(int id, String brand, String type, String color, int inStock) {
+    public Bike(int id, String brand, String type, String color, int inStock, int price, boolean isAvailable) {
         this.id = id;
         this.brand = brand;
         this.type = type;
         this.color = color;
         this.inStock = inStock;
+        this.price = price;
+        this.isAvailable = isAvailable;
     }
 
     public int getId() {
@@ -48,11 +52,24 @@ public class Bike {
         this.color = color;
     }
 
-    public int isInStock() {
+    public int getInStock() {
         return this.inStock;
     }
 
     public void setInStock(int inStock) {
         this.inStock = inStock;
     }
+    
+    public int getPrice() { return this.price;}
+    
+    public void setPrice(int price) { price = this.price;}
+
+    public String getIsAvailable() {
+        if (isAvailable == true) {
+            return "Available";
+        }
+        else {return "Not Available";}
+    }
+    public void setIsAvailable(boolean isAvailable) { this.isAvailable = isAvailable;}
+
 }

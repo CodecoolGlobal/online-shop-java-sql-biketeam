@@ -1,29 +1,35 @@
 package com.codecool;
 
-import com.codecool.dao.BasketDao;
-import com.codecool.dao.CustomerDao;
-import com.codecool.models.Basket;
-import com.codecool.models.Customer;
+//import com.jakewharton.fliptables.FlipTableConverters;
 
-import java.util.List;
+import com.codecool.models.Admin;
 
 public class Main {
         public static void main(String[] args) {
-            CustomerDao customerDao = new CustomerDao();
-            List<Customer> customers = customerDao.getCustomers();
 
-            for (Customer customer : customers) {
-                System.out.println(customer.getLogin() + " " + customer.getPassword());
-            }
+                Admin admin = new Admin(1, "testName", "PASS");
+                AdminProvider adminProvider = new AdminProvider(admin);
+//              adminProvider.editName();
+//              adminProvider.createProduct();
+           //  adminProvider.setAvailable();
+           //  adminProvider.updateAmount();
 
-            BasketDao basketDao = new BasketDao();
-            List<Basket> baskets = basketDao.getBasket();
+//            BikeDao bikeDao = new BikeDao();
+//            List<Bike> bikes = bikeDao.getBikes();
+//            System.out.println("~~Our Bikes to sell: ~~");
+//            for (Bike bike : bikes) {
+//
+//                System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice());
+//
+//            }
+   //         UI.login();
+           UI.menuForAdmin();
+//            UI.menuForUser();
 
-            for (Basket basket : baskets) {
-                System.out.println(basket.getBasketId() + " " +
-                        basket.getBikeId() + " " + basket.getCustomerId() + " " +
-                        basket.getBikeName() );
-            }
+
+       //      pretty table
+    //        System.out.println(FlipTableConverters.fromIterable(users, User.class));
+
 
         }
     }
