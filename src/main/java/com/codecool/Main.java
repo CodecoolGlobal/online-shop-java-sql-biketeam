@@ -9,6 +9,7 @@ public class Main {
 
                 Admin admin = new Admin(1, "testName", "PASS");
                 AdminProvider adminProvider = new AdminProvider(admin);
+                adminProvider.adminsMenu();
 //              adminProvider.editName();
 //              adminProvider.createProduct();
            //  adminProvider.setAvailable();
@@ -23,7 +24,7 @@ public class Main {
 //
 //            }
    //         UI.login();
-           UI.menuForAdmin();
+    //       UI.menuForAdmin();
 //            UI.menuForUser();
 
 

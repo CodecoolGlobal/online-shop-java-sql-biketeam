@@ -27,7 +27,7 @@ public class AdminProvider {
     public void changePrice(){
         System.out.println("Which brand's price do You want to change? ");
         String brand = scan.next();
-        System.out.println(String.format("Provide new price for &s brand", brand));
+        System.out.println(String.format("Provide new price for %s brand", brand));
         int newPrice = scan.nextInt();
         bikeDao.changePrice(brand, newPrice);
     }
@@ -87,12 +87,59 @@ public class AdminProvider {
         }
     }
 
+        public void editProduct(){
+            System.out.println("What do You want to change?" +
+                    "\n    [1] Edit name" +
+                    "\n    [2] Update amount of bikes" +
+                    "\n    [3] Change price");
+            switch (scan.nextInt()){
+                case 1:
+                    editName();
+                    break;
+                case 2:
+                    updateAmount();
+                    break;
+                case 3:
+                    changePrice();
+            }
+    }
+
     public void printBikesTableForAdmin(){
         List<Bike> bikes = bikeDao.getBikes();
-        System.out.println("~~Our Bikes to sell: ~~");
+        System.out.println("~~ Our Bikes to sell: ~~");
         for (Bike bike : bikes) {
             System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice() + " " + bike.getIsAvailable() );
         }
     }
+    public void adminsMenu(){
+        boolean isRunning = true;
+        while (isRunning) {
+            UI.menuForAdmin();
+            printBikesTableForAdmin();
+            System.out.println("Choose option: ");
+            switch (scan.nextInt()){
+                case 1:
+                    //TODO
+                case 2:
+                    editName();
+                    break;
+                case 3:
+                    setAvailable();
+                    break;
+                case 4:
+                    createProduct();
+                    break;
+                case 5:
+                    editProduct();
+                    break;
+                case 6:
+                    //TODO
+                case 7:
+                    //TODO
+                case 8:
+                    //TODO
 
+            }
+        }
+    }
 }
