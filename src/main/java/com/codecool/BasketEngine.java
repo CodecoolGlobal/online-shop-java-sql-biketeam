@@ -49,4 +49,15 @@ public class BasketEngine {
         String bikeName = input.next();
         basketDao.deleteFromBasket(bikeName);
     }
+
+    public void order() {
+        System.out.println("Do you want to place an order and pay? ");
+        String answer = input.next();
+        switch (answer) {
+            case "yes":
+                basketDao.order();
+            case "no":
+                System.out.println("Return to shopping!");
+        }
+    }
 }

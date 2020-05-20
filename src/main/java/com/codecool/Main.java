@@ -10,13 +10,11 @@ public class Main {
 
             Customer customer = new Customer(2, "login2", "password2");
             BasketEngine basket = new BasketEngine(customer);
-//            basket.addToBasket();
-//            basket.deleteBike();
-            basket.printUserBasket();
+            basket.addToBasket();
+            basket.deleteBike();
             basket.updateQuantity();
+            basket.order();
             basket.printUserBasket();
-
-
         }
     }
 

@@ -8,11 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasketDao extends Dao {
+    List<Basket> basket = new ArrayList<>();
 
     public List<Basket> getBasket() {
-        List<Basket> basket = new ArrayList<>();
         connect();
-
         try {
             ResultSet result = statement.executeQuery("SELECT * FROM Basket;");
             while (result.next()) {
@@ -59,6 +58,17 @@ public class BasketDao extends Dao {
         connect();
         try {
             statement.executeUpdate(String.format("UPDATE Basket SET Quantity='%d' WHERE Bike_Name='%s'", quantity, bikeName));
+            statement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public void order() {
+        connect();
+        try {
+            statement.executeUpdate("DELETE FROM Basket");
             statement.close();
             connection.close();
         } catch (SQLException throwables) {

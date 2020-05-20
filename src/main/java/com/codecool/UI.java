@@ -26,8 +26,6 @@ public class UI {
                 {"8. See feedback and statistics"}
         };
         System.out.println(FlipTable.of(headers,data));
-
-
     }
 
     public static void menuForUser() {
