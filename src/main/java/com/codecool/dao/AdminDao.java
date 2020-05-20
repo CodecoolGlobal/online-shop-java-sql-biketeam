@@ -9,7 +9,7 @@ import java.util.List;
 public class AdminDao extends Dao {
 
     public List<Admin> getCustomers() {
-        List<Admin> customers = new ArrayList<>();
+        List<Admin> admins  = new ArrayList<>();
         connect();
 
         try {
@@ -20,7 +20,7 @@ public class AdminDao extends Dao {
                 String password = results.getString("Password");
 
                 Admin user = new Admin(id, login, password);
-                customers.add(user);
+                admins.add(user);
             }
             results.close();
             statement.close();
@@ -29,6 +29,6 @@ public class AdminDao extends Dao {
             e.printStackTrace();
         }
 
-        return customers;
+        return admins;
     }
 }
