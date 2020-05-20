@@ -26,7 +26,11 @@ public class Main {
             for (Bike bike : bikes) {
 
                 System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice());
+
             }
+            UI.login();
+            UI.menuForAdmin();
+            UI.menuForUser();
 
 
        //      pretty table
