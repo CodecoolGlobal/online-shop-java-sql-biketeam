@@ -1,6 +1,7 @@
 package com.codecool;
 
 import com.codecool.dao.BasketDao;
+import com.codecool.dao.BikeDao;
 import com.codecool.models.Basket;
 import com.codecool.models.Customer;
 
@@ -12,6 +13,7 @@ public class BasketEngine {
     Customer customer;
     Scanner input = new Scanner(System.in);
     BasketDao basketDao = new BasketDao();
+    BikeDao bikes = new BikeDao();
 
     public BasketEngine(Customer customer) {
         this.customer = customer;
@@ -55,9 +57,25 @@ public class BasketEngine {
         String answer = input.next();
         switch (answer) {
             case "yes":
-                basketDao.order();
+                System.out.println("Enter your adress: ");
+                System.out.println("Street: ");
+                String street = input.next();
+                System.out.println("City: ");
+                String city = input.next();
+                System.out.println("Phone number: ");
+                int phone = input.nextInt();
+                basketDao.order(street, city, phone);
+                System.out.println("Thanks for order, see you soon");
             case "no":
                 System.out.println("Return to shopping!");
+        }
+    }
+
+    public void seeAll() {
+        for (int i = 0; i < bikes.getBikes().size(); i++) {
+            System.out.println(bikes.getBikes().get(i).getBrand() + " " + bikes.getBikes().get(i).getType() + " " +
+                    bikes.getBikes().get(i).getColor() + " " + bikes.getBikes().get(i).getPrice() + " " +
+                    bikes.getBikes().get(i).getIsAvailable());
         }
     }
 }

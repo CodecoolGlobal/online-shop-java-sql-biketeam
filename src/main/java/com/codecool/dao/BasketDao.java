@@ -65,10 +65,12 @@ public class BasketDao extends Dao {
         }
     }
 
-    public void order() {
+    public void order(String street, String city, int number) {
         connect();
         try {
-            statement.executeUpdate("DELETE FROM Basket");
+            statement.executeUpdate(String.format("INSERT INTO Customer_Data (Street, City, Phone_Num) " +
+                    String.format("VALUES ('%s', '%s', '%d')", street, city, number)));
+//            statement.executeUpdate("DELETE FROM Basket");
             statement.close();
             connection.close();
         } catch (SQLException throwables) {
