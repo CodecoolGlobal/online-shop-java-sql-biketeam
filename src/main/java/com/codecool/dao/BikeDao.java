@@ -14,6 +14,7 @@ public class BikeDao extends Dao {
         connect();
 
         try {
+            boolean isAvailable;
             ResultSet results = statement.executeQuery("SELECT * FROM Bike;");
             while (results.next()) {
                 int id = results.getInt("Bike ID");
@@ -22,8 +23,13 @@ public class BikeDao extends Dao {
                 String colour = results.getString("Colour");
                 int supplies = results.getInt("In_Stock");
                 int price = results.getInt("Price");
+                String isItAvailable = results.getString("Is_Available");
+                if (isItAvailable.equals("Available")){
+                   isAvailable = true;
+                }
+                else {isAvailable = false;}
 
-                Bike bike = new Bike(id, brand, type, colour, supplies, price);
+                Bike bike = new Bike(id, brand, type, colour, supplies, price, isAvailable);
                 bikes.add(bike);
             }
             results.close();
@@ -36,12 +42,13 @@ public class BikeDao extends Dao {
         return bikes;
     }
 
-    public void addBike(String brand, String type, String colour, int howMany, int price ) {
+    public void addBike(String brand, String type, String colour, int howMany, int price) {
         connect();
 
         try {
-            statement.executeUpdate("INSERT INTO Bike (Brand, Type, Colour, In_Stock, Price)" +
-                    String.format("VALUES ('%s', '%s', '%s', '%d', %d)", brand, type, colour, howMany, price));
+
+            statement.executeUpdate("INSERT INTO Bike (Brand, Type, Colour, In_Stock, Price, Is_Available)" +
+                    String.format("VALUES ('%s', '%s', '%s', '%d', %d, 'Available')", brand, type, colour, howMany, price));
             statement.close();
             connection.close();
         } catch (SQLException e){
@@ -49,20 +56,40 @@ public class BikeDao extends Dao {
         }
     }
 
-    public void removeBike(String brand, int howMany) {
+    public void updateAmountBike(String brand, int howMany) {
         connect();
 
         try {
             ResultSet results = statement.executeQuery(String.format("SELECT * FROM Bike WHERE Brand IN ('%s')", brand));
-            int updatedSupplies = results.getInt("In_Stock") - howMany;
-            statement.executeUpdate(String.format("UPDATE Bike SET In_Stock = %d WHERE Brand = '%s'", updatedSupplies, brand));
-            if (updatedSupplies <= 0) {
-                statement.executeUpdate(String.format("DELETE FROM Bike WHERE Brand='%s'", brand));
+            int updatedSupplies = results.getInt("In_Stock") + howMany;
+            if(updatedSupplies < 0){
+                System.out.println("Error: You can not do that");
             }
+            else if (updatedSupplies == 0) {
+                statement.executeUpdate(String.format("UPDATE Bike SET In_Stock = %d WHERE Brand = '%s'", updatedSupplies, brand));
+                statement.executeUpdate(String.format("UPDATE Bike SET Is_Available = 'Not Available' WHERE Brand = '%s'",brand));
+            }
+            else {
+                statement.executeUpdate(String.format("UPDATE Bike SET In_Stock = %d WHERE Brand = '%s'", updatedSupplies, brand));
+                statement.executeUpdate(String.format("UPDATE Bike SET Is_Available = 'Available' WHERE Brand = '%s'",brand));}
+
+            results.close();
             statement.close();
             connection.close();
         } catch (SQLException e){
             e.printStackTrace();
         }
     }
+
+    public void deleteBikes(String brand){
+        connect();
+        try{
+            statement.executeUpdate(String.format("DELETE FROM Bike WHERE Brand = '%s'", brand));
+            statement.close();
+            connection.close();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
 }
