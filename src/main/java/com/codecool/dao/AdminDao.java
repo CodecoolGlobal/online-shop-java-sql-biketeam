@@ -8,12 +8,12 @@ import java.util.List;
 
 public class AdminDao extends Dao {
 
-    public List<Admin> getCustomers() {
+    public List<Admin> getAdmins(String query) {
         List<Admin> customers = new ArrayList<>();
         connect();
 
         try {
-            ResultSet results = statement.executeQuery("SELECT * FROM Customer;");
+            ResultSet results = statement.executeQuery(query);
             while (results.next()) {
                 int id = results.getInt("Customer_ID");
                 String login = results.getString("Login");
