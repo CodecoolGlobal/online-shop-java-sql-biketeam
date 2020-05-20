@@ -38,7 +38,6 @@ public class BikeDao extends Dao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return bikes;
     }
 

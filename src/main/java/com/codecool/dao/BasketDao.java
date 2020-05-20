@@ -14,16 +14,13 @@ public class BasketDao extends Dao {
         connect();
 
         try {
-            ResultSet result = statement.executeQuery("SELECT * FROM basket;");
+            ResultSet result = statement.executeQuery("SELECT * FROM Basket;");
             while (result.next()) {
-                int basketId = result.getInt("Basket_ID");
-                int bikeId = result.getInt("Bike_ID");
-                int customerId = result.getInt("Customer_ID");
                 String bikeName = result.getString("Bike_Name");
                 String color = result.getString("Color");
                 int quantity = result.getInt("Quantity");
 
-                Basket userBasket = new Basket(basketId, bikeId, customerId, bikeName, color, quantity);
+                Basket userBasket = new Basket(bikeName, color, quantity);
                 basket.add(userBasket);
             }
             result.close();
@@ -33,5 +30,39 @@ public class BasketDao extends Dao {
             throwables.printStackTrace();
         }
         return basket;
+    }
+
+    public void addToBasket(String bikeName, String color, int quantity) {
+        connect();
+        try {
+            statement.executeUpdate("INSERT INTO Basket (Bike_Name, Color, Quantity)" +
+                    String.format("VALUES ('%s', '%s', '%d')", bikeName, color, quantity));
+            statement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public void deleteFromBasket(String bikeName) {
+        connect();
+        try {
+            statement.executeUpdate(String.format("DELETE FROM Basket WHERE Bike_Name='%s'", bikeName));
+            statement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public void updateBasket(String bikeName, int quantity) {
+        connect();
+        try {
+            statement.executeUpdate(String.format("UPDATE Basket SET Quantity='%d' WHERE Bike_Name='%s'", quantity, bikeName));
+            statement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

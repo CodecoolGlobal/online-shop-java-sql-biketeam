@@ -36,12 +36,18 @@ public class UI {
                 {"1. Add product to basket"},
                 {"2. Edit product quantity in my basket"},
                 {"3. Remove product from basket"},
-                {"4. See your basket"},
-                {"5. Place a order"},
-                {"6. See your history of orders"},
+                {"4. See my basket"},
+                {"5. Place an order"},
+                {"6. See my history of orders"},
                 {"7. Rate product"}
         };
         System.out.println(FlipTable.of(headers,data));
     }
+//
+//    public void userSwitch() {
+//        switch (menuForUser()) {
+//
+//        }
+//    }
 
 }
