@@ -42,7 +42,7 @@ public class BikeDao extends Dao {
         return bikes;
     }
 
-    public void addBike(String brand, String type, String colour, int howMany, int price) {
+    public void createBike(String brand, String type, String colour, int howMany, int price) {
         connect();
 
         try {
@@ -88,6 +88,40 @@ public class BikeDao extends Dao {
             statement.close();
             connection.close();
         } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void changeBrand(String currentBrand, String futureBrand) {
+        connect();
+        try {
+            statement.executeUpdate(String.format("UPDATE Bike SET Brand = '%s' WHERE Brand = '%s'", futureBrand, currentBrand));
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void changePrice(String currentBrand, int futurePrice) {
+        connect();
+        try {
+            statement.executeUpdate(String.format("UPDATE Bike SET Price = %d WHERE Brand = '%s'", futurePrice, currentBrand));
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setActive(String brand, Boolean active ) {
+        connect();
+        try {
+        if (active) {
+            statement.executeUpdate(String.format("UPDATE Bike SET Is_Available = 'Available' WHERE Brand = '%s'", brand));
+        } else if (!(active)) {
+            statement.executeUpdate(String.format("UPDATE Bike SET Is_Available = 'Not Available' WHERE Brand = '%s'", brand));
+        } } catch (SQLException e) {
             e.printStackTrace();
         }
     }
