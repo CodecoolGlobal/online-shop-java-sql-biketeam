@@ -22,7 +22,12 @@
     <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="AdminProvider is 6/9 done now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/AdminProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/AdminProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/CustomerProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/CustomerProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dao/BasketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dao/BasketDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/patterns/BasketIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/patterns/BasketIterator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/bike_shop" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bike_shop" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bike_shop" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike_shop" afterDir="false" />
     </list>
@@ -110,6 +115,7 @@
       <updated>1589836056137</updated>
       <workItem from="1589877972665" duration="3643000" />
       <workItem from="1589966128753" duration="6827000" />
+      <workItem from="1590086991122" duration="3082000" />
     </task>
     <task id="LOCAL-00001" summary="DAO skeleton">
       <created>1589877399198</created>
@@ -266,52 +272,60 @@
     </state>
     <state x="582" y="272" width="643" height="509" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589889760492" />
     <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888200980" />
-    <state width="1874" height="651" key="GridCell.Tab.0.bottom" timestamp="1590053541370">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1320" height="505" key="GridCell.Tab.0.bottom" timestamp="1590089560665">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1320" height="505" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1590089560665" />
     <state width="1878" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589972795852" />
     <state width="1874" height="231" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1807" height="249" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590050665856" />
     <state width="1874" height="651" key="GridCell.Tab.0.bottom/67.27.3773.1053@67.27.3773.1053" timestamp="1590053541370" />
-    <state width="1874" height="651" key="GridCell.Tab.0.center" timestamp="1590053541370">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1320" height="505" key="GridCell.Tab.0.center" timestamp="1590089560664">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1320" height="505" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1590089560664" />
     <state width="1878" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589972795851" />
     <state width="1874" height="231" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1807" height="249" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590050665856" />
     <state width="1874" height="651" key="GridCell.Tab.0.center/67.27.3773.1053@67.27.3773.1053" timestamp="1590053541370" />
-    <state width="1874" height="651" key="GridCell.Tab.0.left" timestamp="1590053541369">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1320" height="505" key="GridCell.Tab.0.left" timestamp="1590089560663">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1320" height="505" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1590089560663" />
     <state width="1878" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589972795850" />
     <state width="1874" height="231" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1807" height="249" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590050665855" />
     <state width="1874" height="651" key="GridCell.Tab.0.left/67.27.3773.1053@67.27.3773.1053" timestamp="1590053541369" />
-    <state width="1874" height="651" key="GridCell.Tab.0.right" timestamp="1590053541370">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1320" height="505" key="GridCell.Tab.0.right" timestamp="1590089560664">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1320" height="505" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1590089560664" />
     <state width="1878" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589972795851" />
     <state width="1874" height="231" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1807" height="249" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590050665856" />
     <state width="1874" height="651" key="GridCell.Tab.0.right/67.27.3773.1053@67.27.3773.1053" timestamp="1590053541370" />
-    <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1590051777316">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1320" height="359" key="GridCell.Tab.1.bottom" timestamp="1590087424145">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1320" height="359" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1590087424145" />
     <state width="1874" height="354" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
     <state width="1874" height="354" key="GridCell.Tab.1.bottom/67.27.3773.1053@67.27.3773.1053" timestamp="1590051777316" />
-    <state width="1874" height="354" key="GridCell.Tab.1.center" timestamp="1590051777316">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1320" height="359" key="GridCell.Tab.1.center" timestamp="1590087424144">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1320" height="359" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1590087424144" />
     <state width="1874" height="354" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
     <state width="1874" height="354" key="GridCell.Tab.1.center/67.27.3773.1053@67.27.3773.1053" timestamp="1590051777316" />
-    <state width="1874" height="354" key="GridCell.Tab.1.left" timestamp="1590051777315">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1320" height="359" key="GridCell.Tab.1.left" timestamp="1590087424144">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1320" height="359" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1590087424144" />
     <state width="1874" height="354" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
     <state width="1874" height="354" key="GridCell.Tab.1.left/67.27.3773.1053@67.27.3773.1053" timestamp="1590051777315" />
-    <state width="1874" height="354" key="GridCell.Tab.1.right" timestamp="1590051777316">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1320" height="359" key="GridCell.Tab.1.right" timestamp="1590087424145">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1320" height="359" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1590087424145" />
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.3773.1053@67.27.3773.1053" timestamp="1590051777316" />
     <state x="2023" y="103" width="1798" height="872" key="MergeDialog" timestamp="1589888803466">
@@ -355,5 +369,27 @@
     </state>
     <state x="2544" y="246" key="run.anything.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888987436" />
     <state x="669" y="267" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1589916245841" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codecool/patterns/BasketIterator.java</url>
+          <line>21</line>
+          <properties class="com.codecool.patterns.BasketIterator" method="next">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codecool/UI.java</url>
+          <line>56</line>
+          <properties class="com.codecool.UI" method="displayBasket">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

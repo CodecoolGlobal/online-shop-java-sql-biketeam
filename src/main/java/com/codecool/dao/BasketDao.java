@@ -18,7 +18,6 @@ public class BasketDao extends Dao {
                 String bikeName = result.getString("Bike_Name");
                 String color = result.getString("Color");
                 int quantity = result.getInt("Quantity");
-
                 Basket userBasket = new Basket(bikeName, color, quantity);
                 basket.add(userBasket);
             }

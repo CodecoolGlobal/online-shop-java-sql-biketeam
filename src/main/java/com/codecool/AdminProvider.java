@@ -3,9 +3,9 @@ package com.codecool;
 import com.codecool.dao.BikeDao;
 import com.codecool.dao.CategoryDao;
 import com.codecool.models.Admin;
-import com.codecool.models.Bike;
 import com.codecool.models.Category;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,10 +14,13 @@ public class AdminProvider {
     BikeDao bikeDao = new BikeDao();
     CategoryDao categoryDao = new CategoryDao();
     Scanner scan = new Scanner(System.in);
+    UI print = new UI();
 
     public AdminProvider(Admin admin) {
         this.admin = admin;
     }
+
+    public AdminProvider() { }
 
     public void editName(){
         System.out.println("Which brand's name do You want to change? ");
@@ -139,19 +142,11 @@ public class AdminProvider {
             categoryDao.createCategory(scan.next());
         }
 
-    public void printBikesTableForAdmin(){
-        List<Bike> bikes = bikeDao.getBikes();
-        System.out.println("~~ Our Bikes to sell: ~~");
-        for (Bike bike : bikes) {
-            System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice() + " | " + bike.getIsAvailable() );
-        }
-    }
-
-    public void adminsMenu(){
+    public void adminsMenu() throws SQLException {
         boolean isRunning = true;
         while (isRunning) {
-            UI.menuForAdmin();
-            printBikesTableForAdmin();
+            print.menuForAdmin();
+            print.displayBikes();
             System.out.println("Choose option: ");
             switch (scan.nextInt()){
                 case 1:

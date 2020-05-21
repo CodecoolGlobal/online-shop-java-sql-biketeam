@@ -14,6 +14,7 @@ public class CustomerProvider {
     BasketDao basketDao = new BasketDao();
     BikeDao bikes = new BikeDao();
     BasketIterator iterator = new BasketIterator();
+    UI print = new UI();
 
     public CustomerProvider(Customer customer) {
         this.customer = customer;
@@ -62,6 +63,29 @@ public class CustomerProvider {
                 System.out.println("Thanks for order, see you soon");
             case "no":
                 System.out.println("Return to shopping!");
+        }
+    }
+
+    public void customerMenu() {
+        boolean isRun = true;
+        while (isRun) {
+            print.menuForLoginOrRegister();
+            print.menuForUser();
+            int userChoice = input.nextInt();
+            switch (userChoice) {
+                case 1:
+                    addToBasket();
+                    break;
+                case 2:
+                    updateQuantity();
+                    break;
+                case 3:
+                    deleteBike();
+                    break;
+                case 4:
+                    print.displayBasket();
+                    break;
+            }
         }
     }
 }

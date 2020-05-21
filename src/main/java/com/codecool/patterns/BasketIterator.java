@@ -8,8 +8,9 @@ import java.util.Iterator;
 import java.util.List;
 
 public class BasketIterator implements Iterator<BasketDao> {
-    BasketDao basket = new BasketDao();
+
     private List<Basket> basketList = new ArrayList<>();
+    BasketDao basket = new BasketDao();
     Iterator<Basket> iterator = basket.getBasket().iterator();
 
     @Override

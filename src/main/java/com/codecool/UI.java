@@ -2,7 +2,6 @@ package com.codecool;
 
 import com.codecool.dao.BasketDao;
 import com.codecool.dao.Dao;
-import com.codecool.patterns.BasketIterable;
 import com.codecool.patterns.BasketIterator;
 import com.jakewharton.fliptables.FlipTable;
 import com.jakewharton.fliptables.FlipTableConverters;
@@ -13,19 +12,13 @@ import java.sql.SQLException;
 public class UI extends Dao {
     BasketDao basketDao = new BasketDao();
     BasketIterator basketIterator = new BasketIterator();
-    BasketIterable basketIterable = new BasketIterable();
+    private IO io;
 
-
-    public static void login() {
-        String[] headers = {"Welcome to our store!"};
-        String[][] data = {
-                {"Please enter your login and password :"}
-        };
-        System.out.println(FlipTable.of(headers, data));
-
+    public UI() {
+        io = new IO();
     }
 
-    public static void menuForAdmin() {
+    public void menuForAdmin() {
         String[] headers = {"Hello Master what you want to do ?"};
         String[][] data = {
                 {"[1] Create new product category"},
@@ -39,11 +32,9 @@ public class UI extends Dao {
                 {"[9] See feedback and statistics"}
         };
         System.out.println(FlipTable.of(headers, data));
-
-
     }
 
-    public static void menuForUser() {
+    public void menuForUser() {
         String[] headers = {"Hello Customer what you want to do ?"};
         String[][] data = {
                 {"[1] Add product to basket"},
@@ -63,10 +54,23 @@ public class UI extends Dao {
         System.out.println(FlipTableConverters.fromResultSet(resultSet));
     }
 
-    public void seeBasket() {
-
+    public void displayBasket() {
             String[] header = {"Your Basket"};
-            String[][] data = {{basketIterator.next().getBasket().toString()}};
-            System.out.println(FlipTable.of(header, data));
+            String[][] data = {{String.valueOf(basketIterator.next().getBasket())}};
+            System.out.printf(FlipTable.of(header, data));
         }
+
+
+    public void menuForLoginOrRegister() {
+        String[] headers = {"Welcome to BikeShop!"};
+        String[][] data ={
+                {"(1) Login"},
+                {"(2) Register"}
+        };
+        System.out.println(FlipTable.of(headers, data));
     }
+
+    public String gatherInput(String message) {
+        return io.gatherInput(message);
+    }
+}
