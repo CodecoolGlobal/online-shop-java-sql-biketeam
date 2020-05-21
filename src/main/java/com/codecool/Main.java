@@ -2,8 +2,11 @@ package com.codecool;
 
 //import com.jakewharton.fliptables.FlipTableConverters;
 
+import java.sql.SQLException;
+
 public class Main {
-        public static void main(String[] args) {
+        public static void main(String[] args) throws SQLException {
+            UI ui = new UI();
 
 //                Admin admin = new Admin(1, "testName", "PASS");
 //                AdminProvider adminProvider = new AdminProvider(admin);
@@ -12,19 +15,10 @@ public class Main {
 //              adminProvider.createProduct();
            //  adminProvider.setAvailable();
            //  adminProvider.updateAmount();
-
-//            BikeDao bikeDao = new BikeDao();
-//            List<Bike> bikes = bikeDao.getBikes();
-//            System.out.println("~~Our Bikes to sell: ~~");
-//            for (Bike bike : bikes) {
-//
-//                System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice());
-//
-//            }
    //         UI.login();
     //       UI.menuForAdmin();
 //            UI.menuForUser();
-                UI.displayBikes();
+                ui.displayBikes();
 
 
        //      pretty table
