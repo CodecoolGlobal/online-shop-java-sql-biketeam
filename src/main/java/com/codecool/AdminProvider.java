@@ -164,16 +164,19 @@ public class AdminProvider {
                     setAvailable();
                     break;
                 case 4:
-                    createProduct();
+                    deleteBrand();
                     break;
                 case 5:
-                    editProduct();
+                    createProduct();
                     break;
                 case 6:
-                    //TODO
+                    editProduct();
+                    break;
                 case 7:
                     //TODO
                 case 8:
+                    //TODO
+                case 9:
                     //TODO
 
             }

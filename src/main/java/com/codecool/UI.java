@@ -16,14 +16,15 @@ public class UI {
     public static void menuForAdmin(){
         String[] headers = {"Hello Master what you want to do ?"};
         String[][] data = {
-            {"1. Create new product category"},
-            {"2. Edit name of the product"},
-                {"3. Deactivate product"},
-                {"4. Create new product"},
-                {"5. Edit product"},
-                {"6. Give a discount"},
-                {"7. Status of orders"},
-                {"8. See feedback and statistics"}
+            {"[1] Create new product category"},
+            {"[2] Edit name of the product"},
+                {"[3] Deactivate product"},
+                {"[4] Delete product"},
+                {"[5] Create new product"},
+                {"[6] Edit product"},
+                {"[7] Give a discount"},
+                {"[8] Status of orders"},
+                {"[9] See feedback and statistics"}
         };
         System.out.println(FlipTable.of(headers,data));
 
