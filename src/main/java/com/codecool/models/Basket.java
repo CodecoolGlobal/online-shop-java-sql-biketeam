@@ -2,39 +2,42 @@ package com.codecool.models;
 
 public class Basket {
 
+    private int basketID;
+    private int bikeID;
+    private int customerID;
     private String bikeName;
-    private String color;
-    private int quantity;
 
-    public Basket(String bikeName, String color, int quantity) {
+    public Basket(int basketID, int bikeID, int customerID, String bikeName) {
 
+        this.basketID = basketID;
+        this.bikeID = bikeID;
+        this.customerID = customerID;
         this.bikeName = bikeName;
-        this.color = color;
-        this.quantity = quantity;
     }
 
+
+    public int getBasketID() {
+        return basketID;
+    }
+
+    public void setBasketID(int basketID)  {
+        this.basketID = basketID;
+    }
+
+    public int getBikeID() {
+        return bikeID;
+    }
+
+    public void setBikeID(int bikeID) {
+        this.bikeID = bikeID;
+    }
+
+    public int getCustomerID() {
+        return customerID;
+    }
 
     public String getBikeName() {
-        return bikeName;
+        return this.bikeName;
     }
 
-    public void setBikeName(String bikeName)  {
-        this.bikeName = bikeName;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 }
