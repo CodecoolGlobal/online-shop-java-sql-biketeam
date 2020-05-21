@@ -70,7 +70,18 @@ public class BasketDao extends Dao {
         try {
             statement.executeUpdate(String.format("INSERT INTO Customer_Data (Street, City, Phone_Num) " +
                     String.format("VALUES ('%s', '%s', '%d')", street, city, number)));
-//            statement.executeUpdate("DELETE FROM Basket");
+            statement.executeUpdate("DELETE FROM Basket");
+            statement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public void basketToOrder() {
+        connect();
+        try {
+            statement.executeQuery("INSERT INTO Order SELECT Bike_Name, Color, Quantity FROM Basket");
             statement.close();
             connection.close();
         } catch (SQLException throwables) {

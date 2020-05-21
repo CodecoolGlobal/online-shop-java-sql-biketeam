@@ -8,17 +8,17 @@ import com.codecool.models.Customer;
 import java.util.List;
 import java.util.Scanner;
 
-public class BasketEngine {
+public class CustomerProvider {
 
     Customer customer;
     Scanner input = new Scanner(System.in);
     BasketDao basketDao = new BasketDao();
     BikeDao bikes = new BikeDao();
 
-    public BasketEngine(Customer customer) {
+    public CustomerProvider(Customer customer) {
         this.customer = customer;
     }
-    public BasketEngine() {}
+    public CustomerProvider() {}
 
     public void addToBasket() {
         System.out.println("Add a name of bike: ");
@@ -65,11 +65,13 @@ public class BasketEngine {
                 System.out.println("Phone number: ");
                 int phone = input.nextInt();
                 basketDao.order(street, city, phone);
+                basketDao.basketToOrder();
                 System.out.println("Thanks for order, see you soon");
             case "no":
                 System.out.println("Return to shopping!");
         }
     }
+
 
     public void seeAll() {
         for (int i = 0; i < bikes.getBikes().size(); i++) {

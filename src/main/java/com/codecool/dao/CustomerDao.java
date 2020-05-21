@@ -19,7 +19,6 @@ public class CustomerDao extends Dao {
                 int id = results.getInt("Customer_ID");
                 String login = results.getString("Login");
                 String password = results.getString("Password");
-
                 Customer user = new Customer(id, login, password);
                 customers.add(user);
             }
