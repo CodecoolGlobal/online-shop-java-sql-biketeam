@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a2cc673b-cbe4-493d-a08e-9e8557f2c621" name="Default Changelist" comment="AdminProvider is 6/9 done now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/AdminProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/AdminProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bike_shop" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bike_shop" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bike_shop" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike_shop" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -266,31 +265,31 @@
     </state>
     <state x="582" y="272" width="643" height="509" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589889760492" />
     <state x="2502" y="282" width="735" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589888200980" />
-    <state width="1874" height="651" key="GridCell.Tab.0.bottom" timestamp="1590053541370">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1878" height="277" key="GridCell.Tab.0.bottom" timestamp="1590056238863">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589972795852" />
+    <state width="1878" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590056238863" />
     <state width="1874" height="231" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1807" height="249" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590050665856" />
     <state width="1874" height="651" key="GridCell.Tab.0.bottom/67.27.3773.1053@67.27.3773.1053" timestamp="1590053541370" />
-    <state width="1874" height="651" key="GridCell.Tab.0.center" timestamp="1590053541370">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1878" height="277" key="GridCell.Tab.0.center" timestamp="1590056238863">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589972795851" />
+    <state width="1878" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590056238863" />
     <state width="1874" height="231" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1807" height="249" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590050665856" />
     <state width="1874" height="651" key="GridCell.Tab.0.center/67.27.3773.1053@67.27.3773.1053" timestamp="1590053541370" />
-    <state width="1874" height="651" key="GridCell.Tab.0.left" timestamp="1590053541369">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1878" height="277" key="GridCell.Tab.0.left" timestamp="1590056238862">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589972795850" />
+    <state width="1878" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590056238862" />
     <state width="1874" height="231" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1807" height="249" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590050665855" />
     <state width="1874" height="651" key="GridCell.Tab.0.left/67.27.3773.1053@67.27.3773.1053" timestamp="1590053541369" />
-    <state width="1874" height="651" key="GridCell.Tab.0.right" timestamp="1590053541370">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state width="1878" height="277" key="GridCell.Tab.0.right" timestamp="1590056238863">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589972795851" />
+    <state width="1878" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590056238863" />
     <state width="1874" height="231" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589889012215" />
     <state width="1807" height="249" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590050665856" />
     <state width="1874" height="651" key="GridCell.Tab.0.right/67.27.3773.1053@67.27.3773.1053" timestamp="1590053541370" />
@@ -314,6 +313,10 @@
     </state>
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589885245337" />
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.3773.1053@67.27.3773.1053" timestamp="1590051777316" />
+    <state x="493" y="179" width="930" height="682" key="Maven.ArtifactSearchDialog" timestamp="1590059028257">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="493" y="179" width="930" height="682" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590059028257" />
     <state x="2023" y="103" width="1798" height="872" key="MergeDialog" timestamp="1589888803466">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

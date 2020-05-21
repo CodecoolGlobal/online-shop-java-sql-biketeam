@@ -2,14 +2,12 @@ package com.codecool;
 
 //import com.jakewharton.fliptables.FlipTableConverters;
 
-import com.codecool.models.Admin;
-
 public class Main {
         public static void main(String[] args) {
 
-                Admin admin = new Admin(1, "testName", "PASS");
-                AdminProvider adminProvider = new AdminProvider(admin);
-                adminProvider.adminsMenu();
+//                Admin admin = new Admin(1, "testName", "PASS");
+//                AdminProvider adminProvider = new AdminProvider(admin);
+//                adminProvider.adminsMenu();
 //              adminProvider.editName();
 //              adminProvider.createProduct();
            //  adminProvider.setAvailable();
@@ -26,6 +24,7 @@ public class Main {
    //         UI.login();
     //       UI.menuForAdmin();
 //            UI.menuForUser();
+                UI.displayBikes();
 
 
        //      pretty table
