@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="online-shop-java-sql-biketeam" target="" />
+      <module name="online-shop-java-sql-biketeam" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

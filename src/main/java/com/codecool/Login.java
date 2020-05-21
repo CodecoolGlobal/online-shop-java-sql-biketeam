@@ -9,6 +9,7 @@ import com.codecool.models.Admin;
 
 public class Login extends Dao {
 
+
     public Admin loginAttempt(String userEmail, String userPassword) {
         connect();
         List<Admin> users = null;
@@ -23,6 +24,7 @@ public class Login extends Dao {
 
     private List<Admin> getMatchingUser(String adminLogin, String adminPassword) throws SQLException {
         return new AdminDao().getAdmins(
-                "SELECT * FROM Admins WHERE Login = '" + adminLogin + "' AND password = '" + adminPassword + "';");
+                "SELECT * FROM Admin WHERE Login = '" + adminLogin + "' AND password = '" + adminPassword + "';");
     }
+
 }

@@ -5,6 +5,7 @@ package com.codecool;
 import com.codecool.dao.BikeDao;
 import com.codecool.models.Admin;
 import com.codecool.models.Bike;
+import com.codecool.IO;
 
 import java.util.List;
 
@@ -22,12 +23,20 @@ public class Main {
             List<Bike> bikes = bikeDao.getBikes();
             System.out.println("~~Our Bikes to sell: ~~");
             for (Bike bike : bikes) {
-                System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice() + " " + bike.getIsAvailable() );
+
+
+                System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice());
+
             }
-//
-//
-//             pretty table
-//            System.out.println(FlipTableConverters.fromIterable(users, User.class));
+            //UI.login();
+            new IO();
+            new Session();
+            //UI.menuForAdmin();
+            //UI.menuForUser();
+
+
+       //      pretty table
+    //        System.out.println(FlipTableConverters.fromIterable(users, User.class));
 
         }
     }
