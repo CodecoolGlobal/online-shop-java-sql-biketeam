@@ -37,4 +37,12 @@ public class Basket {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public String toString() {
+        String string = getBikeName();
+        String colors = getColor();
+        int quant = getQuantity();
+        String format = String.format("name: %s | color: %s | quantity: %d%n", string, colors, quant);
+        return format;
+    }
 }

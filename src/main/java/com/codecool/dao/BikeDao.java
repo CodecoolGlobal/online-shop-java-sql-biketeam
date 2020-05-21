@@ -8,9 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BikeDao extends Dao {
+    List<Bike> bikes = new ArrayList<>();
 
     public List<Bike> getBikes() {
-        List<Bike> bikes = new ArrayList<>();
+
         connect();
 
         try {
