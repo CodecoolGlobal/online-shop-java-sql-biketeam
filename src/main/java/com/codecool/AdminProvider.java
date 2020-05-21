@@ -1,8 +1,10 @@
 package com.codecool;
 
 import com.codecool.dao.BikeDao;
+import com.codecool.dao.CategoryDao;
 import com.codecool.models.Admin;
 import com.codecool.models.Bike;
+import com.codecool.models.Category;
 
 import java.util.List;
 import java.util.Scanner;
@@ -10,6 +12,7 @@ import java.util.Scanner;
 public class AdminProvider {
     Admin admin;
     BikeDao bikeDao = new BikeDao();
+    CategoryDao categoryDao = new CategoryDao();
     Scanner scan = new Scanner(System.in);
 
     public AdminProvider(Admin admin) {
@@ -50,8 +53,7 @@ public class AdminProvider {
     public void createProduct(){
         System.out.println("Provide brand's name of new bike product: ");
         String newName= scan.next();
-        System.out.println("What type is it? ");
-        String newType= scan.next();
+        String type = categoryChooser();
         System.out.println("What colour it has? ");
         String newColour= scan.next();
         System.out.println("How many bikes You want to add to supplies? ");
@@ -59,8 +61,30 @@ public class AdminProvider {
         System.out.println("What will be the cost of new bike? ");
         int newPrice= scan.nextInt();
 
-        bikeDao.createBike( newName, newType, newColour, newAmount, newPrice);
+        bikeDao.createBike( newName, type, newColour, newAmount, newPrice);
 
+    }
+
+    private String categoryChooser() {
+        List<Category> options = categoryDao.getCategories();
+        System.out.println("Choose bike category from list: ");
+        String type = null;
+        int chosen = 0;
+        do {
+            for (Category category : options) {
+                System.out.println("[" + category.getID() + "]" + category.getCategory());
+            }
+            chosen = scan.nextInt();
+            for (Category category : options) {
+                int temp = category.getID();
+                if (temp == chosen) {
+                    type = category.getCategory();
+                } else {
+
+                }
+            }
+        } while (chosen <= 0 || chosen> options.size());
+        return type;
     }
 
     public void deleteBrand(){
@@ -101,16 +125,28 @@ public class AdminProvider {
                     break;
                 case 3:
                     changePrice();
+                    break;
             }
     }
+
+        public void createCategory(){
+            System.out.println("You are creating new category, there are already this bike types in database: ");
+            List<Category> categories = categoryDao.getCategories();
+            for (Category category : categories){
+                System.out.println(category.getCategory());
+            }
+            System.out.println("Provide new category: ");
+            categoryDao.createCategory(scan.next());
+        }
 
     public void printBikesTableForAdmin(){
         List<Bike> bikes = bikeDao.getBikes();
         System.out.println("~~ Our Bikes to sell: ~~");
         for (Bike bike : bikes) {
-            System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice() + " " + bike.getIsAvailable() );
+            System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice() + " | " + bike.getIsAvailable() );
         }
     }
+
     public void adminsMenu(){
         boolean isRunning = true;
         while (isRunning) {
@@ -119,7 +155,8 @@ public class AdminProvider {
             System.out.println("Choose option: ");
             switch (scan.nextInt()){
                 case 1:
-                    //TODO
+                    createCategory();
+                    break;
                 case 2:
                     editName();
                     break;
