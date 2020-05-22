@@ -21,6 +21,6 @@ public class Register extends Dao {
         connect();
         String login = ui.gatherInput("Enter your name: ");
         String password = ui.gatherInput("Enter your password: ");
-        customerDao.registerCustomer(login, password);
+        customerDao.registerCustomer(login, password, 2);
     }
 }

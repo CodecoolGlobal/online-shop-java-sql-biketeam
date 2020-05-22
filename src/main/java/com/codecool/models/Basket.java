@@ -39,5 +39,12 @@ public class Basket {
     public String getBikeName() {
         return this.bikeName;
     }
+    public String toString() {
+        int ID = getBikeID();
+        String bikeBrand = getBikeName();
+        String format = String.format(" [%d] | Your future bike is: '%s",
+                ID, bikeBrand);
+        return format;
+    }
 
 }

@@ -4,10 +4,10 @@ import com.codecool.dao.BikeDao;
 import com.codecool.dao.CategoryDao;
 import com.codecool.dao.OrderDao;
 import com.codecool.models.Admin;
-import com.codecool.models.Bike;
 import com.codecool.models.Category;
 import com.codecool.models.Order;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,6 +17,7 @@ public class AdminProvider {
     CategoryDao categoryDao = new CategoryDao();
     Scanner scan = new Scanner(System.in);
 
+
     public AdminProvider(Admin admin) {
         this.admin = admin;
     }
@@ -24,7 +25,7 @@ public class AdminProvider {
     public void editName(){
         System.out.println("Which brand's name do You want to change? ");
         String oldName = scan.next();
-        System.out.println(String.format("Provide new name for &s brand", oldName));
+        System.out.println(String.format("Provide new name for %s brand", oldName));
         String newName = scan.next();
         bikeDao.changeBrand(oldName, newName);
     }
@@ -120,13 +121,13 @@ public class AdminProvider {
             categoryDao.createCategory(scan.next());
         }
 
-    public void printBikesTableForAdmin(){
-        List<Bike> bikes = bikeDao.getBikes();
-        System.out.println("~~ Our Bikes to sell: ~~");
-        for (Bike bike : bikes) {
-            System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice() + " | " + bike.getIsAvailable() );
-        }
-    }
+//    public void printBikesTableForAdmin(){
+//        List<Bike> bikes = bikeDao.getBikes();
+//        System.out.println("~~ Our Bikes to sell: ~~");
+//        for (Bike bike : bikes) {
+//            System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | In stock: " + bike.getInStock() + " | Price: " + bike.getPrice() + " | " + bike.getIsAvailable() );
+//        }
+//    }
 
     public void showOrders(){
         OrderDao orders = new OrderDao();
@@ -150,21 +151,24 @@ public class AdminProvider {
     }
 
 
-    public void adminsMenu(){
+    public void adminsMenu() throws SQLException {
         Common common = new Common();
         boolean isRunning = true;
         while (isRunning) {
             UI.menuForAdmin();
-            printBikesTableForAdmin();
             System.out.println("Choose option: ");
             switch (scan.nextInt()){
                 case 1:
                     createCategory();
                     break;
                 case 2:
+                    UI ui = new UI();
+                    ui.displayBikes();
                     editName();
                     break;
                 case 3:
+                    UI ui2 = new UI();
+                    ui2.displayBikes();
                     setAvailable();
                     break;
                 case 4:
@@ -174,6 +178,8 @@ public class AdminProvider {
                     createProduct();
                     break;
                 case 6:
+                    UI ui3 = new UI();
+                    ui3.displayBikes();
                     editProduct();
                     break;
                 case 7:

@@ -72,4 +72,17 @@ public class Bike {
     }
     public void setIsAvailable(boolean isAvailable) { this.isAvailable = isAvailable;}
 
+    public String toString() {
+        int ID = getId();
+        String avail = getIsAvailable();
+        String brand = getBrand();
+        String type = getType();
+        String colors = getColor();
+        int stock = getInStock();
+        int price = getPrice();
+        String format = String.format(" [%d] | (%s) |brand: %s | type: %s | color: %s | in stock: %d | price: %d%n",
+               ID, avail, brand, type, colors, stock, price);
+        return format;
+    }
+
 }

@@ -7,6 +7,7 @@ import com.codecool.models.Bike;
 import com.codecool.models.Customer;
 import com.codecool.models.Order;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -100,22 +101,28 @@ public class CustomerProvider {
 
     }
 
-    public void customersMenu(){
+    public void customersMenu() throws SQLException {
         boolean isRunning = true;
         while (isRunning) {
             UI.menuForUser();
             System.out.println("Choose option: ");
             switch (input.nextInt()){
                 case 1:
+                    UI ui = new UI();
+                    ui.displayBikes();
                     addToBasket();
                     break;
                 case 2:
-                    updateQuantity();
+//                    updateQuantity();
                     break;
                 case 3:
+                    UI ui2 = new UI();
+                    ui2.displayBikes();
                     deleteBike();
                     break;
                 case 4:
+                    UI ui3 = new UI();
+                    ui3.displayBasket();
                     printUserBasket();
                     break;
                 case 5:
@@ -125,7 +132,8 @@ public class CustomerProvider {
                     historyOrders();
                     break;
                 case 7:
-                    printBikesTableForCustomer();
+                    UI ui4 = new UI();
+                    ui4.displayBikes();
                     break;
                 case 8:
                     chooseCategory();

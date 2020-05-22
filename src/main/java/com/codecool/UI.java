@@ -40,15 +40,15 @@ public class UI extends Dao {
     public static void menuForUser() {
         String[] headers = {"MENU: "};
         String[][] data = {
-                {"1. Add product to basket"},
-                {"2. Edit product quantity in my basket"},
-                {"3. Remove product from basket"},
-                {"4. See your basket"},
-                {"5. Place an order"},
-                {"6. See your orders"},
-                {"7. Show all available bikes"},
-                {"8. Choose products by category"},
-                {"0. Log out"}
+                {"[1] Add product to basket"},
+                {"[2] Edit product quantity in my basket"},
+                {"[3] Remove product from basket"},
+                {"[4] See your basket"},
+                {"[5] Place an order"},
+                {"[6] See your orders"},
+                {"[7] Show all bikes"},
+                {"[8] Choose products by category"},
+                {"[0] Log out"}
         };
         System.out.println(FlipTable.of(headers,data));
     }

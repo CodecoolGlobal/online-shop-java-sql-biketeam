@@ -1,5 +1,6 @@
 package com.codecool.dao;
 
+import com.codecool.AdminProvider;
 import com.codecool.UI;
 import com.codecool.models.Admin;
 
@@ -40,6 +41,8 @@ public class AdminDao extends Dao {
         connect();
         try {
             statement.execute(query);
+            statement.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -55,15 +58,20 @@ public class AdminDao extends Dao {
                     boolean found = resultSet.getBoolean(1);
                     if (found) {
                         System.out.println("access accepted");
-                        print.menuForAdmin();
+                        statement.close();
+                        connection.close();
+                        Admin admin = new Admin(1, login, password);
+                        AdminProvider adminProvider = new AdminProvider(admin);
+                        adminProvider.adminsMenu();
                     } else {
                         System.out.println("access denied");
+                        statement.close();
+                        connection.close();
                         found = false;
                     }
                 }
             }
-            statement.close();
-            connection.close();
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

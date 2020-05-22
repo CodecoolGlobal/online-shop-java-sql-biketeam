@@ -1,8 +1,6 @@
 package com.codecool;
 
 import com.codecool.dao.Dao;
-import com.codecool.models.Admin;
-import com.codecool.models.Customer;
 
 import java.sql.SQLException;
 
@@ -11,33 +9,34 @@ public class Session extends Dao {
     UI ui = new UI();
     Login login = new Login();
     Register register = new Register();
-    Customer customer = new Customer(1, "login", "haslo");
-    Admin admin = new Admin(1, "login", "haslo");
-    CustomerProvider customerProvider = new CustomerProvider(customer);
-    AdminProvider adminProvider = new AdminProvider(admin);
+//    Customer customer = new Customer(1, "login", "haslo");
+//    Admin admin = new Admin(1, "login", "haslo");
+//    CustomerProvider customerProvider = new CustomerProvider(customer);
+//    AdminProvider adminProvider = new AdminProvider(admin);
 
     public Session() throws SQLException {
-        connect();
+   //     connect();
         askIfLoginOrRegistration();
         askIfAdminOrUser();
     }
 
     private void askIfLoginOrRegistration() throws SQLException {
-        boolean registered = false;
-        do {
+        boolean registered = true;
+        while (registered) {
             ui.menuForLoginOrRegister();
             String input = ui.gatherInput("");
             if (input.equals("2")) {
                 ui.registerMenu();
-                if (ui.gatherInput("").equals("1")) {
+                String input2 = ui.gatherInput("");
+                if (input2.equals("1")) {
                     register.enterAdminData();
-                } else if (ui.gatherInput("").equals("2")) {
+                } else if (input2.equals("2")) {
                     register.enterUserData();
                 }
-            }else if (input.equals("1")){
+            } else if (input.equals("1")) {
                 askIfAdminOrUser();
             }
-        }while (!registered);
+        }
     }
 
     private void askIfAdminOrUser() throws SQLException {

@@ -35,11 +35,13 @@ public class CustomerDao extends Dao {
         return customers;
     }
 
-    public void registerCustomer(String login, String password) {
-        String query = "INSERT INTO Customer (Login, Password)" + String.format("VALUES ('%s', '%s')", login, password);
+    public void registerCustomer(String login, String password, int dataID) {
+        String query = "INSERT INTO Customer (Login, Password, Customer_Data_ID)" + String.format("VALUES ('%s', '%s', %d);", login, password, dataID);
         connect();
         try {
             statement.execute(query);
+            statement.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
