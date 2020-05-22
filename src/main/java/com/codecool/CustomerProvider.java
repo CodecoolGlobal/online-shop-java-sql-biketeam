@@ -2,9 +2,11 @@ package com.codecool;
 
 import com.codecool.dao.BasketDao;
 import com.codecool.dao.BikeDao;
+import com.codecool.dao.CategoryDao;
 import com.codecool.models.Customer;
 import com.codecool.patterns.BasketIterator;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class CustomerProvider {
@@ -15,6 +17,7 @@ public class CustomerProvider {
     BikeDao bikes = new BikeDao();
     BasketIterator iterator = new BasketIterator();
     UI print = new UI();
+    CategoryDao categoryDao = new CategoryDao();
 
     public CustomerProvider(Customer customer) {
         this.customer = customer;
@@ -59,17 +62,15 @@ public class CustomerProvider {
                 System.out.println("Phone number: ");
                 int phone = input.nextInt();
                 basketDao.order(street, city, phone);
-                basketDao.basketToOrder();
                 System.out.println("Thanks for order, see you soon");
             case "no":
                 System.out.println("Return to shopping!");
         }
     }
 
-    public void customerMenu() {
+    public void customerMenu() throws SQLException {
         boolean isRun = true;
         while (isRun) {
-            print.menuForLoginOrRegister();
             print.menuForUser();
             int userChoice = input.nextInt();
             switch (userChoice) {
@@ -85,6 +86,13 @@ public class CustomerProvider {
                 case 4:
                     print.displayBasket();
                     break;
+                case 5:
+                    order();
+                    break;
+                case 8:
+                    print.displayBikes();
+                    break;
+
             }
         }
     }

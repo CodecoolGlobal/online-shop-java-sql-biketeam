@@ -146,7 +146,6 @@ public class AdminProvider {
         boolean isRunning = true;
         while (isRunning) {
             print.menuForAdmin();
-            print.displayBikes();
             System.out.println("Choose option: ");
             switch (scan.nextInt()){
                 case 1:
@@ -173,6 +172,8 @@ public class AdminProvider {
                     //TODO
                 case 9:
                     //TODO
+                case 10:
+                    print.displayBikes();
 
             }
         }

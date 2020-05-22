@@ -23,17 +23,4 @@ public abstract class Dao {
             System.out.println("Couldn't connect to database" + e.getMessage());
         }
     }
-
-    protected void insert(String table, String[] columns, String[] values) {
-        String query = "INSERT INTO " + table
-                + " ( " + String.join("," , columns) + " ) "
-                + " VALUES " + " (" + String.join("," , values) + ");";
-
-        connect();
-        try {
-            statement.execute(query);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class BasketIterator implements Iterator<BasketDao> {
+public class BasketIterator implements Iterator<List<Basket>> {
 
-    private List<Basket> basketList = new ArrayList<>();
+    private List<Basket> basketList = new ArrayList<Basket>();
     BasketDao basket = new BasketDao();
     Iterator<Basket> iterator = basket.getBasket().iterator();
 
@@ -19,11 +19,11 @@ public class BasketIterator implements Iterator<BasketDao> {
     }
 
     @Override
-    public BasketDao next() {
+    public List<Basket> next() {
         while (iterator.hasNext()) {
-            iterator.next().toString();
+            basketList.add(iterator.next());
         }
-        return basket;
+        return basketList;
     }
 
 
