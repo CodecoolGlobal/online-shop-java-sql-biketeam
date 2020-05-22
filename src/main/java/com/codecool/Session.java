@@ -41,10 +41,8 @@ public class Session extends Dao {
         String input = ui.gatherInput("");
         if (input.equals("1")) {
             login.loginAdmin();
-            adminProvider.adminsMenu();
         } else if (input.equals("2")) {
             login.loginUser();
-            customerProvider.customerMenu();
         }
     }
 
