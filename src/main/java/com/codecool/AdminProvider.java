@@ -2,9 +2,11 @@ package com.codecool;
 
 import com.codecool.dao.BikeDao;
 import com.codecool.dao.CategoryDao;
+import com.codecool.dao.OrderDao;
 import com.codecool.models.Admin;
 import com.codecool.models.Bike;
 import com.codecool.models.Category;
+import com.codecool.models.Order;
 
 import java.util.List;
 import java.util.Scanner;
@@ -53,7 +55,8 @@ public class AdminProvider {
     public void createProduct(){
         System.out.println("Provide brand's name of new bike product: ");
         String newName= scan.next();
-        String type = categoryChooser();
+        Common common = new Common();
+        String type = common.categoryChooser();
         System.out.println("What colour it has? ");
         String newColour= scan.next();
         System.out.println("How many bikes You want to add to supplies? ");
@@ -63,28 +66,6 @@ public class AdminProvider {
 
         bikeDao.createBike( newName, type, newColour, newAmount, newPrice);
 
-    }
-
-    private String categoryChooser() {
-        List<Category> options = categoryDao.getCategories();
-        System.out.println("Choose bike category from list: ");
-        String type = null;
-        int chosen = 0;
-        do {
-            for (Category category : options) {
-                System.out.println("[" + category.getID() + "]" + category.getCategory());
-            }
-            chosen = scan.nextInt();
-            for (Category category : options) {
-                int temp = category.getID();
-                if (temp == chosen) {
-                    type = category.getCategory();
-                } else {
-
-                }
-            }
-        } while (chosen <= 0 || chosen> options.size());
-        return type;
     }
 
     public void deleteBrand(){
@@ -147,6 +128,28 @@ public class AdminProvider {
         }
     }
 
+    public void showOrders(){
+        OrderDao orders = new OrderDao();
+        List<Order> ord = orders.getOrders();
+        for (Order o: ord){
+            System.out.println(o.getOrderId() +".  |Bike ID: " + o.getBikeId()+ " |Customer ID: " + o.getCustomerId() +" |Order status: " + o.getStatus());
+        }
+    }
+
+    public void changeStatus(){
+        OrderDao orders = new OrderDao();
+        List<Order> ord = orders.getOrders();
+        Common common = new Common();
+        int chosenOne = 0;
+        do{
+        System.out.println("Which order You want to change status? ");
+        chosenOne = scan.nextInt();
+        } while (chosenOne <= 0 || chosenOne > ord.size());
+        int stat = common.statusChooser();
+        orders.changeStatus(stat, chosenOne);
+    }
+
+
     public void adminsMenu(){
         boolean isRunning = true;
         while (isRunning) {
@@ -173,12 +176,14 @@ public class AdminProvider {
                     editProduct();
                     break;
                 case 7:
-                    //TODO
+                    showOrders();
+                    break;
                 case 8:
-                    //TODO
-                case 9:
-                    //TODO
-
+                    showOrders();
+                    changeStatus();
+                    break;
+                case 0:
+                    isRunning = false;
             }
         }
     }

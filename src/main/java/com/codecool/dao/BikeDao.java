@@ -125,17 +125,36 @@ public class BikeDao extends Dao {
         }
     }
 
-    public String showByID(int ID) {
+    public List<Bike> getBikesByCategory(String category) {
+        List<Bike> bikes = new ArrayList<>();
         connect();
-        String print = "";
         try {
-            ResultSet results = statement.executeQuery(String.format("SELECT * FROM Bike WHERE Bike_ID IN (%d)", ID));
-            print = results.getString("Brand");
+            boolean isAvailable;
+            ResultSet results = statement.executeQuery(String.format("SELECT * FROM Bike WHERE Type='%s';",category));
+            while (results.next()) {
+                int id = results.getInt("Bike_ID");
+                String brand = results.getString("Brand");
+                String type = results.getString("Type");
+                String colour = results.getString("Colour");
+                int supplies = results.getInt("In_Stock");
+                int price = results.getInt("Price");
+                String isItAvailable = results.getString("Is_Available");
+                if (isItAvailable.equals("Available")) {
+                    isAvailable = true;
+                } else {
+                    isAvailable = false;
+                }
+
+                Bike bike = new Bike(id, brand, type, colour, supplies, price, isAvailable);
+                bikes.add(bike);
+            }
             results.close();
             statement.close();
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        } return print;
+        }
+
+        return bikes;
     }
 }

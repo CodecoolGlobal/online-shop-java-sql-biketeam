@@ -1,9 +1,9 @@
 package com.codecool;
-
 import com.codecool.dao.BasketDao;
 import com.codecool.dao.BikeDao;
 import com.codecool.dao.OrderDao;
 import com.codecool.models.Basket;
+import com.codecool.models.Bike;
 import com.codecool.models.Customer;
 import com.codecool.models.Order;
 
@@ -58,13 +58,14 @@ public class CustomerProvider {
         BasketDao basket = new BasketDao();
         System.out.println("Are You sure you want to place an order and pay? [y/n]");
         String answer = input.next();
+        Common common = new Common();
         switch (answer) {
             case "y":
                 List<Basket> boughtProducts = basket.getBasket();
                 for (Basket item: boughtProducts){
                     int temp = item.getBikeID();
-                    int customerID = 1;
-                  order.createOrder(customerID,temp);
+                    int customerID = 15;
+                  order.createOrder(customerID, temp, common.getDate(), 1);
                 }
                 basket.clearBasket();
                 System.out.println("Thanks for order, see you soon");
@@ -74,25 +75,33 @@ public class CustomerProvider {
     }
 
 
-    public void seeAll() {
-        for (int i = 0; i < bikes.getBikes().size(); i++) {
-            System.out.println(bikes.getBikes().get(i).getId() + " " + bikes.getBikes().get(i).getBrand() + " " + bikes.getBikes().get(i).getType() + " " +
-                    bikes.getBikes().get(i).getColor() + " " + bikes.getBikes().get(i).getPrice() + " " +
-                    bikes.getBikes().get(i).getIsAvailable());
+    public void printBikesTableForCustomer(){
+        List<Bike> bikesAll = bikes.getBikes();
+        System.out.println("~~ Our Bikes to sell: ~~");
+        for (Bike bike : bikesAll) {
+            System.out.println(bike.getId() + " " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | Price: " + bike.getPrice() + " | " + bike.getIsAvailable() );
         }
     }
 
-    public void history(){
+    public void historyOrders(){
         OrderDao order = new OrderDao();
         List<Order> orders = order.getOrders();
         for (Order ord: orders){
-            System.out.println(ord.getBikeId());
+            System.out.println("Product ID:" + ord.getBikeId() + " |Date: " + ord.getDate() + " |Order Status: " + ord.getStatus());
         }
+    }
+
+    public void chooseCategory(){
+        Common common = new Common();
+        List<Bike> bikeCategory = bikes.getBikesByCategory(common.categoryChooser());
+        for (Bike bike : bikeCategory) {
+            System.out.println("ID: " + bike.getId() + " | " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | Price: " + bike.getPrice() + " | " + bike.getIsAvailable() );
+        }
+
     }
 
     public void customersMenu(){
         boolean isRunning = true;
-        seeAll();
         while (isRunning) {
             UI.menuForUser();
             System.out.println("Choose option: ");
@@ -111,10 +120,21 @@ public class CustomerProvider {
                     break;
                 case 5:
                     order();
+                    break;
                 case 6:
-                    history();
+                    historyOrders();
+                    break;
                 case 7:
-                    //TODO
+                    printBikesTableForCustomer();
+                    break;
+                case 8:
+                    chooseCategory();
+                    break;
+                case 0:
+                    isRunning = false;
+
+
+
             }
         }
     }

@@ -18,13 +18,13 @@ public class UI {
         String[][] data = {
             {"[1] Create new product category"},
             {"[2] Edit name of the product"},
-                {"[3] Deactivate product"},
+                {"[3] Change availability"},
                 {"[4] Delete product"},
                 {"[5] Create new product"},
                 {"[6] Edit product"},
-                {"[7] Give a discount"},
-                {"[8] Status of orders"},
-                {"[9] See feedback and statistics"}
+                {"[7] Check all orders"},
+                {"[8] Set status of orders"},
+                {"[0] Log out"},
         };
         System.out.println(FlipTable.of(headers,data));
 
@@ -38,9 +38,11 @@ public class UI {
                 {"2. Edit product quantity in my basket"},
                 {"3. Remove product from basket"},
                 {"4. See your basket"},
-                {"5. Place a order"},
-                {"6. See your history of orders"},
-                {"7. Rate product"}
+                {"5. Place an order"},
+                {"6. See your orders"},
+                {"7. Show all available bikes"},
+                {"8. Choose products by category"},
+                {"0. Log out"}
         };
         System.out.println(FlipTable.of(headers,data));
     }
