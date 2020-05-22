@@ -5,7 +5,25 @@
 *.log
 
 # BlueJ files
-*.ctxt
+*.ctxttarget/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.iml
+.idea/
+.eclipse
+
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.iml
+.idea/
+.eclipse
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
