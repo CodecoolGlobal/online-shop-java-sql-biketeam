@@ -1,5 +1,6 @@
 package com.codecool.dao;
 
+import com.codecool.AdminProvider;
 import com.codecool.UI;
 import com.codecool.models.Admin;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 public class AdminDao extends Dao {
     UI print = new UI();
+    AdminProvider adminProvider = new AdminProvider();
 
     public List<Admin> getAdmins(String query) {
         List<Admin> admins = new ArrayList<>();
@@ -50,12 +52,13 @@ public class AdminDao extends Dao {
         connect();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
+
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
                     boolean found = resultSet.getBoolean(1);
                     if (found) {
                         System.out.println("access accepted");
-                        print.menuForAdmin();
+                        adminProvider.adminsMenu();
                     } else {
                         System.out.println("access denied");
                         found = false;

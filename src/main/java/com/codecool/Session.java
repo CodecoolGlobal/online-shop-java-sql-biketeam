@@ -19,21 +19,23 @@ public class Session extends Dao {
     }
 
     private void askIfLoginOrRegistration() throws SQLException {
-        boolean registered = false;
-        do {
+        boolean registered = true;
+        while (registered) {
             ui.menuForLoginOrRegister();
             String input = ui.gatherInput("");
             if (input.equals("2")) {
                 ui.registerMenu();
-                if (ui.gatherInput("").equals("1")) {
+                String input2 = ui.gatherInput("");
+                if (input2.equals("1")) {
                     register.enterAdminData();
-                } else if (ui.gatherInput("").equals("2")) {
+                } else if (input2.equals("2")) {
                     register.enterUserData();
                 }
-            }else if (input.equals("1")){
+            } else if (input.equals("1")) {
                 askIfAdminOrUser();
             }
-        }while (!registered);
+        }
+
     }
 
     private void askIfAdminOrUser() throws SQLException {

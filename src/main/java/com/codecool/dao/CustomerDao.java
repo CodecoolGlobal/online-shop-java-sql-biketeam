@@ -1,5 +1,6 @@
 package com.codecool.dao;
 
+import com.codecool.CustomerProvider;
 import com.codecool.UI;
 import com.codecool.models.Customer;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 public class CustomerDao extends Dao {
     UI print = new UI();
+    CustomerProvider customerProvider = new CustomerProvider();
 
     public List<Customer> getCustomers() {
         List<Customer> customers = new ArrayList<>();
@@ -55,7 +57,7 @@ public class CustomerDao extends Dao {
                     boolean found = resultSet.getBoolean(1);
                     if (found) {
                         System.out.println("access accepted");
-                        print.menuForUser();
+                        customerProvider.customerMenu();
                     } else {
                         System.out.println("access denied");
                         found = false;

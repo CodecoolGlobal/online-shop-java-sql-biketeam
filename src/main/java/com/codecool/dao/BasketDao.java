@@ -42,10 +42,10 @@ public class BasketDao extends Dao {
         }
     }
 
-    public void deleteFromBasket(String bikeName) {
+    public void deleteFromBasket(int bikeID) {
         connect();
         try {
-            statement.executeUpdate(String.format("DELETE FROM Basket WHERE Bike_Name='%s'", bikeName));
+            statement.executeUpdate(String.format("DELETE FROM Basket WHERE Bike_ID='%d'", bikeID));
             statement.close();
             connection.close();
         } catch (SQLException throwables) {
