@@ -12,7 +12,8 @@ import java.util.List;
 
 public class AdminDao extends Dao {
     UI print = new UI();
-    AdminProvider adminProvider = new AdminProvider();
+    Admin admin = new Admin(1, "login", "haslo");
+    AdminProvider adminProvider = new AdminProvider(admin);
 
     public List<Admin> getAdmins(String query) {
         List<Admin> admins = new ArrayList<>();

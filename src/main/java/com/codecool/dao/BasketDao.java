@@ -13,12 +13,13 @@ public class BasketDao extends Dao {
     public List<Basket> getBasket() {
         connect();
         try {
-            ResultSet result = statement.executeQuery("SELECT * FROM Basket;");
+            ResultSet result = statement.executeQuery("SELECT * FROM Basket INNER JOIN Bike on Basket.Bike_ID=Bike.Bike_ID");
             while (result.next()) {
-                String bikeName = result.getString("Bike_Name");
-                String color = result.getString("Color");
-                int quantity = result.getInt("Quantity");
-                Basket userBasket = new Basket(bikeName, color, quantity);
+                int basketID = result.getInt("Basket_ID");
+                int bikeID = result.getInt("Bike_ID");
+                int customerID = result.getInt("Customer_ID");
+                String bikeName = result.getString("Brand");
+                Basket userBasket = new Basket(basketID, bikeID, customerID, bikeName);
                 basket.add(userBasket);
             }
             result.close();
@@ -30,11 +31,11 @@ public class BasketDao extends Dao {
         return basket;
     }
 
-    public void addToBasket(String bikeName, String color, int quantity) {
+    public void addNewProduct(int bikeID, int customerID) {
         connect();
         try {
-            statement.executeUpdate("INSERT INTO Basket (Bike_Name, Color, Quantity)" +
-                    String.format("VALUES ('%s', '%s', '%d')", bikeName, color, quantity));
+            statement.executeUpdate("INSERT INTO Basket (Bike_ID, Customer_ID)" +
+                    String.format("VALUES (%d, %d)", bikeID, customerID));
             statement.close();
             connection.close();
         } catch (SQLException throwables) {
@@ -45,7 +46,7 @@ public class BasketDao extends Dao {
     public void deleteFromBasket(int bikeID) {
         connect();
         try {
-            statement.executeUpdate(String.format("DELETE FROM Basket WHERE Bike_ID='%d'", bikeID));
+            statement.executeUpdate(String.format("DELETE FROM Basket WHERE Bike_ID ='%d'", bikeID));
             statement.close();
             connection.close();
         } catch (SQLException throwables) {
@@ -64,11 +65,9 @@ public class BasketDao extends Dao {
         }
     }
 
-    public void order(String street, String city, int number) {
+    public void clearBasket() {
         connect();
         try {
-            statement.executeUpdate(String.format("INSERT INTO Customer_Data (Street, City, Phone_Num) " +
-                    String.format("VALUES ('%s', '%s', '%d')", street, city, number)));
             statement.executeUpdate("DELETE FROM Basket");
             statement.close();
             connection.close();

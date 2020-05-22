@@ -9,8 +9,6 @@ public class Session extends Dao {
     UI ui = new UI();
     Login login = new Login();
     Register register = new Register();
-    CustomerProvider customerProvider = new CustomerProvider();
-    AdminProvider adminProvider = new AdminProvider();
 
     public Session() throws SQLException {
         connect();

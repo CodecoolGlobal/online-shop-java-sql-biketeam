@@ -18,7 +18,7 @@ public class BikeDao extends Dao {
             boolean isAvailable;
             ResultSet results = statement.executeQuery("SELECT * FROM Bike;");
             while (results.next()) {
-                int id = results.getInt("Bike ID");
+                int id = results.getInt("Bike_ID");
                 String brand = results.getString("Brand");
                 String type = results.getString("Type");
                 String colour = results.getString("Colour");

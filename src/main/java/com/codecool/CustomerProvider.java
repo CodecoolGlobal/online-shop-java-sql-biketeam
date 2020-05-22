@@ -4,6 +4,7 @@ import com.codecool.dao.BasketDao;
 import com.codecool.dao.BikeDao;
 import com.codecool.dao.CategoryDao;
 import com.codecool.dao.OrderDao;
+import com.codecool.models.Basket;
 import com.codecool.models.Bike;
 import com.codecool.models.Customer;
 import com.codecool.models.Order;
@@ -32,61 +33,70 @@ public class CustomerProvider {
     }
 
     public void addToBasket() {
-        System.out.println("Add a name of bike: ");
-        String bikeName = input.next();
-        System.out.println("Choose a color: ");
-        String color = input.next();
-        System.out.println("Choose quantity: ");
-        int quantity = input.nextInt();
+        BasketDao basket = new BasketDao();
+        System.out.println("Which bike do You want to add to cart? ");
+        int bikeID = input.nextInt();
+        basket.addNewProduct(bikeID, 1);
+    }
 
-        basketDao.addToBasket(bikeName, color, quantity);
+    public void printUserBasket() {
+        BasketDao basket = new BasketDao();
+        List<Basket> printBasket = basket.getBasket();
+        for (Basket bask : printBasket) {
+            System.out.println("Product ID: " + bask.getBikeID() +" | Your future bike: " + bask.getBikeName());
+        }
     }
 
     public void updateQuantity() {
+        BasketDao basket = new BasketDao();
         System.out.println("Which bike's quantity you want to change? ");
         String bikeName = input.next();
         System.out.println("How many? ");
         int newQuantity = input.nextInt();
-        basketDao.updateBasket(bikeName, newQuantity);
+        basket.updateBasket(bikeName, newQuantity);
     }
 
     public void deleteBike() {
+        BasketDao basket = new BasketDao();
         System.out.println("Enter product ID of bike which you want to delete: ");
         int bikeID = input.nextInt();
-        basketDao.deleteFromBasket(bikeID);
+        basket.deleteFromBasket(bikeID);
     }
 
     public void order() {
-        System.out.println("Do you want to place an order and pay? ");
+        OrderDao order = new OrderDao();
+        BasketDao basket = new BasketDao();
+        System.out.println("Are You sure you want to place an order and pay? [y/n]");
         String answer = input.next();
+        Common common = new Common();
         switch (answer) {
-            case "yes":
-                System.out.println("Enter your adress: ");
-                System.out.println("Street: ");
-                String street = input.next();
-                System.out.println("City: ");
-                String city = input.next();
-                System.out.println("Phone number: ");
-                int phone = input.nextInt();
-                basketDao.order(street, city, phone);
+            case "y":
+                List<Basket> boughtProducts = basket.getBasket();
+                for (Basket item: boughtProducts){
+                    int temp = item.getBikeID();
+                    int customerID = 15;
+                    order.createOrder(customerID, temp, common.getDate(), 1);
+                }
+                basket.clearBasket();
                 System.out.println("Thanks for order, see you soon");
-            case "no":
+            case "n":
                 System.out.println("Return to shopping!");
         }
     }
 
-    public void historyOrders() {
+    public void historyOrders(){
+        OrderDao order = new OrderDao();
         List<Order> orders = order.getOrders();
-        for (Order ord : orders) {
+        for (Order ord: orders){
             System.out.println("Product ID:" + ord.getBikeId() + " |Date: " + ord.getDate() + " |Order Status: " + ord.getStatus());
         }
     }
 
-    public void chooseCategory() {
+    public void chooseCategory(){
         Common common = new Common();
         List<Bike> bikeCategory = bikes.getBikesByCategory(common.categoryChooser());
         for (Bike bike : bikeCategory) {
-            System.out.println("ID: " + bike.getId() + " | " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | Price: " + bike.getPrice() + " | " + bike.getIsAvailable());
+            System.out.println("ID: " + bike.getId() + " | " + bike.getBrand() + " | " + bike.getType() + " | " + bike.getColor() + " | Price: " + bike.getPrice() + " | " + bike.getIsAvailable() );
         }
 
     }
@@ -120,6 +130,9 @@ public class CustomerProvider {
                     break;
                 case 8:
                     print.displayBikes();
+                    break;
+                case 0:
+                    isRun = false;
                     break;
 
             }

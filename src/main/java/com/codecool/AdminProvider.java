@@ -2,8 +2,10 @@ package com.codecool;
 
 import com.codecool.dao.BikeDao;
 import com.codecool.dao.CategoryDao;
+import com.codecool.dao.OrderDao;
 import com.codecool.models.Admin;
 import com.codecool.models.Category;
+import com.codecool.models.Order;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -20,7 +22,6 @@ public class AdminProvider {
         this.admin = admin;
     }
 
-    public AdminProvider() { }
 
     public void editName(){
         System.out.println("Which brand's name do You want to change? ");
@@ -56,7 +57,8 @@ public class AdminProvider {
     public void createProduct(){
         System.out.println("Provide brand's name of new bike product: ");
         String newName= scan.next();
-        String type = categoryChooser();
+        Common common = new Common();
+        String type = common.categoryChooser();
         System.out.println("What colour it has? ");
         String newColour= scan.next();
         System.out.println("How many bikes You want to add to supplies? ");
@@ -66,28 +68,6 @@ public class AdminProvider {
 
         bikeDao.createBike( newName, type, newColour, newAmount, newPrice);
 
-    }
-
-    private String categoryChooser() {
-        List<Category> options = categoryDao.getCategories();
-        System.out.println("Choose bike category from list: ");
-        String type = null;
-        int chosen = 0;
-        do {
-            for (Category category : options) {
-                System.out.println("[" + category.getID() + "]" + category.getCategory());
-            }
-            chosen = scan.nextInt();
-            for (Category category : options) {
-                int temp = category.getID();
-                if (temp == chosen) {
-                    type = category.getCategory();
-                } else {
-
-                }
-            }
-        } while (chosen <= 0 || chosen> options.size());
-        return type;
     }
 
     public void deleteBrand(){
@@ -100,7 +80,7 @@ public class AdminProvider {
         System.out.println("Which brand do you want to change amount of bikes? ");
         String brand = scan.next();
         System.out.println("Choose option: [1] Add bikes" +
-                        "\n                [2] Remove bikes");
+                "\n                [2] Remove bikes");
         int chosenOption = scan.nextInt();
         System.out.println("How many bikes do You want to add/remove?");
         int amount = scan.nextInt();
@@ -114,38 +94,62 @@ public class AdminProvider {
         }
     }
 
-        public void editProduct(){
-            System.out.println("What do You want to change?" +
-                    "\n    [1] Edit name" +
-                    "\n    [2] Update amount of bikes" +
-                    "\n    [3] Change price");
-            switch (scan.nextInt()){
-                case 1:
-                    editName();
-                    break;
-                case 2:
-                    updateAmount();
-                    break;
-                case 3:
-                    changePrice();
-                    break;
-            }
+    public void editProduct(){
+        System.out.println("What do You want to change?" +
+                "\n    [1] Edit name" +
+                "\n    [2] Update amount of bikes" +
+                "\n    [3] Change price");
+        switch (scan.nextInt()){
+            case 1:
+                editName();
+                break;
+            case 2:
+                updateAmount();
+                break;
+            case 3:
+                changePrice();
+                break;
+        }
     }
 
-        public void createCategory(){
-            System.out.println("You are creating new category, there are already this bike types in database: ");
-            List<Category> categories = categoryDao.getCategories();
-            for (Category category : categories){
-                System.out.println(category.getCategory());
-            }
-            System.out.println("Provide new category: ");
-            categoryDao.createCategory(scan.next());
+    public void createCategory(){
+        System.out.println("You are creating new category, there are already this bike types in database: ");
+        List<Category> categories = categoryDao.getCategories();
+        for (Category category : categories){
+            System.out.println(category.getCategory());
         }
+        System.out.println("Provide new category: ");
+        categoryDao.createCategory(scan.next());
+    }
+
+
+    public void showOrders(){
+        OrderDao orders = new OrderDao();
+        List<Order> ord = orders.getOrders();
+        for (Order o: ord){
+            System.out.println(o.getOrderId() +".  |Bike ID: " + o.getBikeId()+ " |Customer ID: " + o.getCustomerId() +" |Order status: " + o.getStatus());
+        }
+    }
+
+    public void changeStatus(){
+        OrderDao orders = new OrderDao();
+        List<Order> ord = orders.getOrders();
+        Common common = new Common();
+        int chosenOne = 0;
+        do{
+            System.out.println("Which order You want to change status? ");
+            chosenOne = scan.nextInt();
+        } while (chosenOne <= 0 || chosenOne > ord.size());
+        int stat = common.statusChooser();
+        orders.changeStatus(stat, chosenOne);
+    }
+
 
     public void adminsMenu() throws SQLException {
         boolean isRunning = true;
         while (isRunning) {
             print.menuForAdmin();
+            print.displayBikes();
             System.out.println("Choose option: ");
             switch (scan.nextInt()){
                 case 1:
@@ -167,14 +171,14 @@ public class AdminProvider {
                     editProduct();
                     break;
                 case 7:
-                    //TODO
+                    showOrders();
+                    break;
                 case 8:
-                    //TODO
-                case 9:
-                    //TODO
-                case 10:
-                    print.displayBikes();
-
+                    showOrders();
+                    changeStatus();
+                    break;
+                case 0:
+                    isRunning = false;
             }
         }
     }
