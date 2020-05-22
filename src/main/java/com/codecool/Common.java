@@ -61,4 +61,10 @@ public class Common {
         } while (chosen <= 0 || chosen > options.size());
         return type;
     }
+
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
 }

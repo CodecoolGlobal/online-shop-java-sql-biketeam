@@ -151,6 +151,7 @@ public class AdminProvider {
 
 
     public void adminsMenu(){
+        Common common = new Common();
         boolean isRunning = true;
         while (isRunning) {
             UI.menuForAdmin();

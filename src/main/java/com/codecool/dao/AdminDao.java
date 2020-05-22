@@ -1,7 +1,7 @@
 package com.codecool.dao;
 
 import com.codecool.UI;
-import com.codecool.models.Customer;
+import com.codecool.models.Admin;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,21 +9,21 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerDao extends Dao {
+public class AdminDao extends Dao {
     UI print = new UI();
 
-    public List<Customer> getCustomers() {
-        List<Customer> customers = new ArrayList<>();
+    public List<Admin> getAdmins(String query) {
+        List<Admin> admins = new ArrayList<>();
         connect();
+
         try {
-            ResultSet results = statement.executeQuery("SELECT * FROM Customer;");
+            ResultSet results = statement.executeQuery(query);
             while (results.next()) {
-                int id = results.getInt("Customer_ID");
+                int id = results.getInt("Admin_ID");
                 String login = results.getString("Login");
                 String password = results.getString("Password");
-
-                Customer user = new Customer(id, login, password);
-                customers.add(user);
+                Admin user = new Admin(id, login, password);
+                admins.add(user);
             }
             results.close();
             statement.close();
@@ -32,11 +32,11 @@ public class CustomerDao extends Dao {
             e.printStackTrace();
         }
 
-        return customers;
+        return admins;
     }
 
-    public void registerCustomer(String login, String password) {
-        String query = "INSERT INTO Customer (Login, Password)" + String.format("VALUES ('%s', '%s')", login, password);
+    public void registerAdmin(String login, String password) {
+        String query = "INSERT INTO Admin (Login, Password)" + String.format("VALUES ('%s', '%s')", login, password);
         connect();
         try {
             statement.execute(query);
@@ -45,8 +45,8 @@ public class CustomerDao extends Dao {
         }
     }
 
-    public void loginCustomer(String login, String password) {
-        String query = "SELECT COUNT(*) FROM Customer WHERE Login LIKE '" + login + "'AND Password LIKE '" + password + "'";
+    public void loginAdmin(String login, String password) {
+        String query = "SELECT COUNT(*) FROM Admin WHERE Login LIKE '" + login + "'AND Password LIKE '" + password + "'";
         connect();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -55,7 +55,7 @@ public class CustomerDao extends Dao {
                     boolean found = resultSet.getBoolean(1);
                     if (found) {
                         System.out.println("access accepted");
-                        print.menuForUser();
+                        print.menuForAdmin();
                     } else {
                         System.out.println("access denied");
                         found = false;
