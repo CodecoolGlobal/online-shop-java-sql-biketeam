@@ -13,7 +13,7 @@ public class Register extends Dao {
     }
 
     private void enterAdminData() {
-        String login = ui.gatherInput("Enter your name: ");
+        String login = ui.gatherInput("Enter your Login: ");
         String password = ui.gatherInput("Enter your password: ");
         String[] values = {login, password};
         new AdminDao().insertUser(values);

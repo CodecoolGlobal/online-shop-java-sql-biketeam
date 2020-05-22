@@ -22,10 +22,10 @@ public class UI {
     public static void menuForAdmin(){
         String[] headers = {"Hello Master what you want to do ?"};
         String[][] data = {
-            {"1. Creat new product category"},
+            {"1. Create new product category"},
             {"2. Edit name of the product"},
                 {"3. Deactivate product"},
-                {"4. Creat new product"},
+                {"4. Create new product"},
                 {"5. Edit product"},
                 {"6. Give a discount"},
                 {"7. Status of orders"},

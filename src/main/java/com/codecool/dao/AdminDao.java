@@ -15,7 +15,7 @@ public class AdminDao extends Dao {
         try {
             ResultSet results = statement.executeQuery(query);
             while (results.next()) {
-                int id = results.getInt("Customer_ID");
+                int id = results.getInt("Admin_ID");
                 String login = results.getString("Login");
                 String password = results.getString("Password");
 
@@ -32,12 +32,12 @@ public class AdminDao extends Dao {
         return admins;
     }
     public void insertUser(String[] values) {
-        String[] columns = { "name", "surname", "email", "password", "phone", "Id_role" };
+        String[] columns = { "Login", "password"};
         
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             values[i] = String.format("'%s'", values[i]);
         }
-        insert("Users", columns, values);
+        insert("Admin", columns, values);
 
     }
 }
